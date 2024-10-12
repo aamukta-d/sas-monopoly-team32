@@ -2477,7 +2477,7 @@ function setup() {
 		}
 	}
 
-	$("#board, #moneybar", "#wheelCanvas").show();
+	$("#board, #moneybar, #wheelCanvas, #logo").show();
 	$("#setup").hide();
 
 	if (pcount === 2) {
