@@ -179,3 +179,46 @@ chanceCards[12] = new Card("Your podcast is popping off. Collect $150.", functio
 chanceCards[13] = new Card("H-O-T-T-O-G-O you must now ADVANCE TO GO!", function() {advance(0)});
 chanceCards[14] = new Card("Time to go home! ADVANCE to Beta Avenue. If you pass \"GO\" collect $200.", function() { advance(11);});
 chanceCards[15] = new Card("Go to the Backrooms. Go Directly to the Backrooms. Do not pass \"GO\". Do not collect $200.", function() { gotobackrooms();});
+
+function openDinoRunPopup(){
+	const popupWindow = window.open('', 'GamePopup', 'width=800,height=300,scrollbars=no');
+	popupWindow.document.write(`
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+		  <meta charset="UTF-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+	  
+		  <title>Dino Run Game</title>   
+		  
+		</head>
+		<body>
+		  <canvas id="canvas" width="800" height="200"></canvas>
+		</body>
+		<script src="static/monjs/dr_game_index.js"></script>
+		</html>
+	  `);
+}
+
+function flappyPopUp() {
+	const popupWindow = window.open('', 'GamePopup', 'width=325,height=1000,scrollbars=no');
+
+	// Write the HTML structure inside the popup with proper template literal
+	popupWindow.document.write(`
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+  
+	  <title>Flappy Bird Game</title>   
+	  
+	</head>
+	<body>
+	  <canvas id="canvas" width="300" height="500"></canvas>
+	</body>
+	<script src="static/monjs/fb_game.js"></script>
+	</html>
+  `);
+	popupWindow.document.close();
+}
