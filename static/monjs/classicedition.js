@@ -203,7 +203,7 @@ function openDinoRunPopup(){
 }
 
 function flappyPopUp() {
-	const popupWindow = window.open('', 'GamePopup', 'width=325,height=525,scrollbars=no');
+	const popupWindow = window.open('', 'GamePopup', 'width=325,height=550,scrollbars=no');
 
 	// Write the HTML structure inside the popup with proper template literal
 	popupWindow.document.write(`
