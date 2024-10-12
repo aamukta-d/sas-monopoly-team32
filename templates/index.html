@@ -4,6 +4,9 @@
 	<title>Monopoly</title>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 
+    <!-- Added this enlargetoken for js files to obtain static/images dir -->
+    <div id="enlarge5token" data-image-url="{{ url_for('static', filename='images/') }}" style="display: none;"></div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='monjs/classicedition.js') }}"></script>
 	<!-- Comment out the previous line and uncomment the next one to enable the New York City Edition -->

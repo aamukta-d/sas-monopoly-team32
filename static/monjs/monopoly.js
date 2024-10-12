@@ -1,3 +1,7 @@
+// Constants
+const ENLARGE5TOKEN = document.getElementById("enlarge5token");
+const IMAGE_URL = ENLARGE5TOKEN.getAttribute("data-image-url");
+
 function Game() {
 	var die1;
 	var die2;
@@ -1225,7 +1229,7 @@ function updateDice() {
 			element0 = element0.appendChild(document.createElement("img"));
 		}
 
-		element0.src = "{{ url_for('static', filename='images/Die_') }}" + die0 + ".png";
+		element0.src = IMAGE_URL + "Die_" + die0 + ".png";
 		element0.alt = die0;
 
 		if (element1.firstChild) {
@@ -1234,7 +1238,7 @@ function updateDice() {
 			element1 = element1.appendChild(document.createElement("img"));
 		}
 
-		element1.src = "{{ url_for('static', filename='images/Die_') }}" + die1 + ".png";
+		element1.src = IMAGE_URL + "Die_" + die1 + ".png";
 		element1.alt = die0;
 	} else {
 		document.getElementById("die0").textContent = die0;
@@ -1283,10 +1287,10 @@ function updateOwned() {
 			housetext = "";
 			if (sq.house >= 1 && sq.house <= 4) {
 				for (var x = 1; x <= sq.house; x++) {
-					housetext += "<img src='../images/house.png' alt='' title='House' class='house' />";
+					housetext += "<img src='" + IMAGE_URL + "house.png' alt='' title='House' class='house' />";
 				}
 			} else if (sq.hotel) {
-				housetext += "<img src='../images/hotel.png' alt='' title='Hotel' class='hotel' />";
+				housetext += "<img src='" + IMAGE_URL + "hotel.png' alt='' title='Hotel' class='hotel' />";
 			}
 
 			if (HTML === "") {
@@ -1380,7 +1384,7 @@ function updateOption() {
 		}
 
 		$("#buildings").show();
-		document.getElementById("buildings").innerHTML = "<img src='../images/house.png' alt='' title='House' class='house' />:&nbsp;" + housesum + "&nbsp;&nbsp;<img src='../images/hotel.png' alt='' title='Hotel' class='hotel' />:&nbsp;" + hotelsum;
+		document.getElementById("buildings").innerHTML = "<img src='" + IMAGE_URL + "house.png' alt='' title='House' class='house' />:&nbsp;" + housesum + "&nbsp;&nbsp;<img src='" + IMAGE_URL + "hotel.png' alt='' title='Hotel' class='hotel' />:&nbsp;" + hotelsum;
 
 		return;
 	}
@@ -1525,7 +1529,7 @@ function chanceCommunityChest() {
 			communityChestCards.deck.splice(communityChestCards.index, 1);
 		}
 
-		popup("<img src='../images/community_chest_icon.png' style='height: 50px; width: 53px; float: left; margin: 8px 8px 8px 0px;' /><div style='font-weight: bold; font-size: 16px; '>Community Chest:</div><div style='text-align: justify;'>" + communityChestCards[communityChestIndex].text + "</div>", function() {
+		popup("<img src='" + IMAGE_URL + "community_chest_icon.png' style='height: 50px; width: 53px; float: left; margin: 8px 8px 8px 0px;' /><div style='font-weight: bold; font-size: 16px; '>Community Chest:</div><div style='text-align: justify;'>" + communityChestCards[communityChestIndex].text + "</div>", function() {
 			communityChestAction(communityChestIndex);
 		});
 
@@ -1544,7 +1548,7 @@ function chanceCommunityChest() {
 			chanceCards.deck.splice(chanceCards.index, 1);
 		}
 
-		popup("<img src='../images/chance_icon.png' style='height: 50px; width: 26px; float: left; margin: 8px 8px 8px 0px;' /><div style='font-weight: bold; font-size: 16px; '>Chance:</div><div style='text-align: justify;'>" + chanceCards[chanceIndex].text + "</div>", function() {
+		popup("<img src='" + IMAGE_URL + "chance_icon.png' style='height: 50px; width: 26px; float: left; margin: 8px 8px 8px 0px;' /><div style='font-weight: bold; font-size: 16px; '>Chance:</div><div style='text-align: justify;'>" + chanceCards[chanceIndex].text + "</div>", function() {
 			chanceAction(chanceIndex);
 		});
 
@@ -1926,9 +1930,9 @@ function showStats() {
 				}
 
 				if (sq.house == 5) {
-					housetext += "<span style='float: right; font-weight: bold;'>1&nbsp;x&nbsp;<img src='../images/hotel.png' alt='' title='Hotel' class='hotel' style='float: none;' /></span>";
+					housetext += "<span style='float: right; font-weight: bold;'>1&nbsp;x&nbsp;<img src='" + IMAGE_URL + "hotel.png' alt='' title='Hotel' class='hotel' style='float: none;' /></span>";
 				} else if (sq.house > 0 && sq.house < 5) {
-					housetext += "<span style='float: right; font-weight: bold;'>" + sq.house + "&nbsp;x&nbsp;<img src='../images/house.png' alt='' title='House' class='house' style='float: none;' /></span>";
+					housetext += "<span style='float: right; font-weight: bold;'>" + sq.house + "&nbsp;x&nbsp;<img src='" + IMAGE_URL + "house.png' alt='' title='House' class='house' style='float: none;' /></span>";
 				}
 
 				HTML += "<tr><td class='statscellcolor' style='background: " + sq.color + ";";
@@ -2621,9 +2625,9 @@ window.onload = function() {
 
 
 	// Add images to enlarges.
-	document.getElementById("enlarge0token").innerHTML += '<img src="../images/arrow_icon.png" height="40" width="136" alt="" />';
-	document.getElementById("enlarge20price").innerHTML += "<img src='../images/free_parking_icon.png' height='80' width='72' alt='' style='position: relative; top: -20px;' />";
-	document.getElementById("enlarge38token").innerHTML += '<img src="../images/tax_icon.png" height="60" width="70" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge0token").innerHTML += '<img src="' + IMAGE_URL + 'arrow_icon.png" height="40" width="136" alt="" />';
+	document.getElementById("enlarge20price").innerHTML += "<img src='" + IMAGE_URL + "free_parking_icon.png' height='80' width='72' alt='' style='position: relative; top: -20px;' />";
+	document.getElementById("enlarge38token").innerHTML += '<img src="' + IMAGE_URL + 'tax_icon.png" height="60" width="70" alt="" style="position: relative; top: -20px;" />';
 
 	corrections();
 
@@ -2633,7 +2637,7 @@ window.onload = function() {
 
 	document.getElementById("jail").enlargeId = "enlarge40";
 
-	document.getElementById("enlarge-wrap").innerHTML += "<div id='enlarge40' class='enlarge'><div id='enlarge40color' class='enlarge-color'></div><br /><div id='enlarge40name' class='enlarge-name'>Jail</div><br /><div id='enlarge40price' class='enlarge-price'><img src='../images/jake_icon.png' height='80' width='80' alt='' style='position: relative; top: -20px;' /></div><br /><div id='enlarge40token' class='enlarge-token'></div></div>";
+	document.getElementById("enlarge-wrap").innerHTML += "<div id='enlarge40' class='enlarge'><div id='enlarge40color' class='enlarge-color'></div><br /><div id='enlarge40name' class='enlarge-name'>Jail</div><br /><div id='enlarge40price' class='enlarge-price'><img src='" + IMAGE_URL + "jake_icon.png' height='80' width='80' alt='' style='position: relative; top: -20px;' /></div><br /><div id='enlarge40token' class='enlarge-token'></div></div>";
 
 	document.getElementById("enlarge40name").innerHTML = "Jail";
 
