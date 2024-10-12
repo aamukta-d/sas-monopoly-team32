@@ -40,7 +40,15 @@ function corrections() {
 	const IMAGE_URL = ENLARGE5TOKEN.getAttribute("data-image-url");
 
 	// Add images to enlarges.
-	document.getElementById("enlarge5token").innerHTML += '<img src="' + IMAGE_URL + ' train_icon.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge1token").innerHTML += '<img src="' + IMAGE_URL + 'rizz.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge2token").innerHTML += '<img src="' + IMAGE_URL + 'minigame.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge3token").innerHTML += '<img src="' + IMAGE_URL + 'ohio.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge4token").innerHTML += '<img src="' + IMAGE_URL + 'fanum.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge5token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge6token").innerHTML += '<img src="' + IMAGE_URL + 'sus.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge7token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge8token").innerHTML += '<img src="' + IMAGE_URL + 'sigma.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge9token").innerHTML += '<img src="' + IMAGE_URL + 'alpha.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
 	document.getElementById("enlarge15token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
 	document.getElementById("enlarge25token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
 	document.getElementById("enlarge35token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
@@ -74,12 +82,12 @@ var square = [];
 
 square[0] = new Square("EDGE", "COLLECT $200 SALARY AS YOU PASS.", "#FFFFFF");
 square[1] = new Square("Rizz Lane", "$60", "#8B4513", 60, 3, 2, 10, 30, 90, 160, 250);
-square[2] = new Square("Community Chest", "FOLLOW INSTRUCTIONS ON TOP CARD", "#FFFFFF");
+square[2] = new Square("MINIGAME", "WIN A PRIZE", "#FFFFFF");
 square[3] = new Square("Ohio", "$60", "#8B4513", 60, 3, 4, 20, 60, 180, 320, 450);
 square[4] = new Square("Fanum Tax", "Pay $200", "#FFFFFF");
 square[5] = new Square("Subway Station", "$200", "#FFFFFF", 200, 1);
 square[6] = new Square("Sus Street", "$100", "#87CEEB", 100, 4, 6, 30, 90, 270, 400, 550);
-square[7] = new Square("Chance", "FOLLOW INSTRUCTIONS ON TOP CARD", "#FFFFFF");
+square[7] = new Square("Chance", "FOLLOW INSTRUCTIONS", "#FFFFFF");
 square[8] = new Square("Sigma Avenue", "$100", "#87CEEB", 100, 4, 6, 30, 90, 270, 400, 550);
 square[9] = new Square("Alpha Avenue", "$120", "#87CEEB", 120, 4, 8, 40, 100, 300, 450, 600);
 square[10] = new Square("Just Quandale Dingling", "", "#FFFFFF");
@@ -89,7 +97,7 @@ square[13] = new Square("Goofy Ahh Avenue", "$140", "#FF0080", 140, 5, 10, 50, 1
 square[14] = new Square("Grimace Shake Avenue", "$160", "#FF0080", 160, 5, 12, 60, 180, 500, 700, 900);
 square[15] = new Square("Chungus Station", "$200", "#FFFFFF", 200, 1);
 square[16] = new Square("Poggers Place", "$180", "#FFA500", 180, 6, 14, 70, 200, 550, 750, 950);
-square[17] = new Square("Community Chest", "FOLLOW INSTRUCTIONS ON TOP CARD", "#FFFFFF");
+square[17] = new Square("MINIGAME", "PLAY THE MINIGAME TO WIN A PRIZE", "#FFFFFF");
 square[18] = new Square("Chicken Nugget Avenue", "$180", "#FFA500", 180, 6, 14, 70, 200, 550, 750, 950);
 square[19] = new Square("GigaChad Avenue", "$200", "#FFA500", 200, 6, 16, 80, 220, 600, 800, 1000);
 square[20] = new Square("Free Parking", "", "#FFFFFF");
@@ -105,7 +113,7 @@ square[29] = new Square("Brat Gardens", "$280", "#FFFF00", 280, 8, 24, 120, 360,
 square[30] = new Square("Go to the Backrooms", "You have been sent to the Backrooms. What an L.Do not collect $200.", "#FFFFFF");
 square[31] = new Square("Cap Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
 square[32] = new Square("Aura Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
-square[33] = new Square("Community Chest", "FOLLOW INSTRUCTIONS ON TOP CARD", "#FFFFFF");
+square[33] = new Square("MINIGAME", "PLAY THE MINIGAME TO WIN A PRIZE", "#FFFFFF");
 square[34] = new Square("Yapping Avenue", "$320", "#008000", 320, 9, 28, 150, 450, 1000, 1200, 1400);
 square[35] = new Square("Zesty Station", "$200", "#FFFFFF", 200, 1);
 square[36] = new Square("Chance", "FOLLOW INSTRUCTIONS ON TOP CARD", "#FFFFFF");

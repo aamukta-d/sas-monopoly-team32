@@ -2363,7 +2363,7 @@ function play() {
 		var winner = 0;
 		for(let i = 1; i <= pcount; i++){
 			var money = document.getElementById("p" + i.toString() + "money").textContent;
-			if(money > mostMoney){  //p.money returns 1500 no matter what 
+			if(money > mostMoney){  
 				mostMoney = money;
 				winner = i;
 			}
@@ -2433,8 +2433,13 @@ function play() {
 	}
 
 	updateMoney();
-	var money = document.getElementById("p" + turn.toString() + "money").textContent;
-	var moneyName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
+	//var money = document.getElementById("p" + turn.toString() + "money").textContent;
+	//var moneyName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
+	//alert("money: " + money + " Max money: " + maxMoney);
+	//if(money >= maxMoney){
+	//	$("*").hide();
+	//	alert(moneyName + " has won the game by exceeding the maximum wealth. \nRefresh to play another.");
+	//}
 	updatePosition();
 	updateOwned();
 
