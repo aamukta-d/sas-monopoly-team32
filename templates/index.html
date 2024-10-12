@@ -355,8 +355,12 @@
 				<option value="0" selected="selected">Human</option>
 				<option value="1">AI (Test)</option>
 			</select>
-		</div>   
+		</div>
 	
+		<div id="turnLimit">
+			Turn Limit: <input type="number" id="maxTurns" title="maxTurns" max="100" min="1" value="20"/>
+		</div>
+
 		<div style="margin: 20px 0px;">
 			<input type="button" value="Start Game" onclick="setup();" title="Begin playing." />
 		</div>

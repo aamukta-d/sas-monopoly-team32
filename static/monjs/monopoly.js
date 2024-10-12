@@ -992,6 +992,8 @@ function Trade(initiator, recipient, money, property, communityChestJailCard, ch
 var player = [];
 var pcount;
 var turn = 0, doublecount = 0;
+var turns = 0;
+var maxTurns = 20;
 // Overwrite an array with numbers from one to the array's length in a random order.
 Array.prototype.randomize = function(length) {
 	length = (length || this.length);
@@ -2347,9 +2349,22 @@ function roll() {
 }
 
 function play() {
+	if (turns > MaxTurns){
+		var mostMoney = 0;
+		var winner = null;
+		for(let i = 0; i < pcount; i++){
+			if(player[i].money > mostMoney){
+				mostMoney = player[i].money;
+				winner = i;
+			}
+		}
+		winnerName = player[winner].name;
+		alert(winnerName + " has won the game!!!");
+	}
 
 
 	turn++;
+	turns++
 	if (turn > pcount) {
 		turn -= pcount;
 	}
@@ -2425,6 +2440,9 @@ function setup() {
 	var playerArray = new Array(pcount);
 	var p;
 
+	MaxTurns = document.getElementById("maxTurns").value;
+	turns = 0;
+
 	playerArray.randomize();
 
 	for (var i = 1; i <= pcount; i++) {
@@ -2469,6 +2487,7 @@ function setup() {
 		// element.checked = true;
 	// }
 // }
+
 
 function getCheckedProperty() {
 	for (var i = 0; i < 42; i++) {

@@ -35,7 +35,6 @@ function Card(text, action) {
 }
 
 function corrections() {
-	document.getElementById("cell1name").textContent = "Mediter-ranean Avenue";
 
 	const ENLARGE5TOKEN = document.getElementById("enlarge5token");
 	const IMAGE_URL = ENLARGE5TOKEN.getAttribute("data-image-url");
