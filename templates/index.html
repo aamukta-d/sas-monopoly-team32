@@ -4,12 +4,19 @@
 	<title>Monopoly</title>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 
+    <!-- Added this enlargetoken for js files to obtain static/images dir -->
+    <div id="enlarge5token" data-image-url="{{ url_for('static', filename='images/') }}" style="display: none;"></div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='monjs/classicedition.js') }}"></script>
 	<!-- Comment out the previous line and uncomment the next one to enable the New York City Edition -->
 	<!-- <script type="text/javascript" src="{{ url_for('static', filename='monjs/newyorkcityedition.js') }}"></script> -->
 	<script type="text/javascript" src="{{ url_for('static', filename='monjs/ai.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='monjs/monopoly.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='monjs/rouletteWheel.js') }}"></script> <!-- wheel-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='monjs/jquery-ui.min.js') }}"></script>
+	
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/monopoly.css') }}" />
 </head>
 
@@ -170,6 +177,11 @@
 			<td class="cell board-corner" id="cell0"></td>
 		</tr>
 	</table>
+
+	<div id="wheelDiv">
+		<canvas id="wheelCanvas" width="50" height="50" style="border:10px solid #000000;">CANVAS</canvas>
+	WHEEL GOES HERE
+	</div>
 
 	<div id="moneybarwrap">
 		<div id="moneybar">

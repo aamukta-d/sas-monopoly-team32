@@ -37,13 +37,16 @@ function Card(text, action) {
 function corrections() {
 	document.getElementById("cell1name").textContent = "Mediter-ranean Avenue";
 
+	const ENLARGE5TOKEN = document.getElementById("enlarge5token");
+	const IMAGE_URL = ENLARGE5TOKEN.getAttribute("data-image-url");
+
 	// Add images to enlarges.
-	document.getElementById("enlarge5token").innerHTML += '<img src="../images/train_icon.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge15token").innerHTML += '<img src="../images/train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge25token").innerHTML += '<img src="../images/train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge35token").innerHTML += '<img src="../images/train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge12token").innerHTML += '<img src="../images/electric_icon.png" height="60" width="48" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge28token").innerHTML += '<img src="../images/water_icon.png" height="60" width="78" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge5token").innerHTML += '<img src="' + IMAGE_URL + ' train_icon.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge15token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge25token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge35token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge12token").innerHTML += '<img src="' + IMAGE_URL + 'electric_icon.png" height="60" width="48" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge28token").innerHTML += '<img src="' + IMAGE_URL + 'water_icon.png" height="60" width="78" alt="" style="position: relative; top: -20px;" />';
 }
 
 function utiltext() {
@@ -100,7 +103,7 @@ square[26] = new Square("GYAT Avenue", "$260", "#FFFF00", 260, 8, 22, 110, 330, 
 square[27] = new Square("Demure Avenue", "$260", "#FFFF00", 260, 8, 22, 110, 330, 800, 975, 1150);
 square[28] = new Square("Tiktok Rizz Party", "$150", "#FFFFFF", 150, 2);
 square[29] = new Square("Brat Gardens", "$280", "#FFFF00", 280, 8, 24, 120, 360, 850, 1025, 1200);
-square[30] = new Square("Go to the Backrooms", "Go directly to Jail. Do not pass GO. Do not collect $200.", "#FFFFFF");
+square[30] = new Square("Go to the Backrooms", "You have been sent to the BackRooms. What an L.Do not collect $200.", "#FFFFFF");
 square[31] = new Square("Cap Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
 square[32] = new Square("Aura Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
 square[33] = new Square("Community Chest", "FOLLOW INSTRUCTIONS ON TOP CARD", "#FFFFFF");
