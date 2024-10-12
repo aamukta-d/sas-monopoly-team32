@@ -2241,7 +2241,7 @@ function roll() {
 	document.getElementById("nextbutton").title = "End turn and advance to the next player.";
 
 	game.rollDice();
-	game.spinWheel();
+	///game.spinWheel();
 	var die1 = game.getDie(1);
 	var die2 = game.getDie(2);
 
