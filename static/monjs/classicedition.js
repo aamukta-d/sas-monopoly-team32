@@ -37,13 +37,16 @@ function Card(text, action) {
 function corrections() {
 	document.getElementById("cell1name").textContent = "Mediter-ranean Avenue";
 
+	const ENLARGE5TOKEN = document.getElementById("enlarge5token");
+	const IMAGE_URL = ENLARGE5TOKEN.getAttribute("data-image-url");
+
 	// Add images to enlarges.
-	document.getElementById("enlarge5token").innerHTML += '<img src="../images/train_icon.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge15token").innerHTML += '<img src="../images/train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge25token").innerHTML += '<img src="../images/train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge35token").innerHTML += '<img src="../images/train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge12token").innerHTML += '<img src="../images/electric_icon.png" height="60" width="48" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge28token").innerHTML += '<img src="../images/water_icon.png" height="60" width="78" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge5token").innerHTML += '<img src="' + IMAGE_URL + ' train_icon.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge15token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge25token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge35token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge12token").innerHTML += '<img src="' + IMAGE_URL + 'electric_icon.png" height="60" width="48" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge28token").innerHTML += '<img src="' + IMAGE_URL + 'water_icon.png" height="60" width="78" alt="" style="position: relative; top: -20px;" />';
 }
 
 function utiltext() {
