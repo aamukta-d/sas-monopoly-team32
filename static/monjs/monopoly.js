@@ -2435,7 +2435,6 @@ function play() {
 	updateMoney();
 	var money = document.getElementById("p" + turn.toString() + "money").textContent;
 	var moneyName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
-	alert("money = " + money + " Max money = " + maxMoney + " " + moneyName);
 	if(money >= maxMoney){
 		var winName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
 		$("*").hide();
