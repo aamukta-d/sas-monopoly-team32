@@ -3,6 +3,7 @@ const ENLARGE5TOKEN = document.getElementById("enlarge5token");
 const IMAGE_URL = ENLARGE5TOKEN.getAttribute("data-image-url");
 
 function Game() {
+	var index = 0;
 	var die1;
 	var die2;
 	var areDiceRolled = false;
@@ -1101,8 +1102,6 @@ function popup(HTML, action, option) {
 	});
 
 }
-
-
 function updatePosition() {
 	// Reset borders
 	document.getElementById("jail").style.border = "1px solid black";
@@ -1531,14 +1530,15 @@ function updateOption() {
 function chanceCommunityChest() {
 	var p = player[turn];
 
-	// Community Chest
+	//Community Chest
 	if (p.position === 2 || p.position === 17 || p.position === 33) {
 		var communityChestIndex = communityChestCards.deck[communityChestCards.index];
+		console.log(communityChestIndex);
 
 		// Remove the get out of jail free card from the deck.
-		if (communityChestIndex === 0) {
-			communityChestCards.deck.splice(communityChestCards.index, 1);
-		}
+		// if (communityChestIndex === 0) {
+		// 	communityChestCards.deck.splice(communityChestCards.index, 1);
+		// }
 
 		popup("<img src='" + IMAGE_URL + "community_chest_icon.png' style='height: 50px; width: 53px; float: left; margin: 8px 8px 8px 0px;' /><div style='font-weight: bold; font-size: 16px; '>Community Chest:</div><div style='text-align: justify;'>" + communityChestCards[communityChestIndex].text + "</div>", function() {
 			communityChestAction(communityChestIndex);
@@ -1549,6 +1549,7 @@ function chanceCommunityChest() {
 		if (communityChestCards.index >= communityChestCards.deck.length) {
 			communityChestCards.index = 0;
 		}
+	
 
 	// Chance
 	} else if (p.position === 7 || p.position === 22 || p.position === 36) {
@@ -2593,7 +2594,7 @@ window.onload = function() {
 
 	// Shuffle Chance and Community Chest decks.
 	chanceCards.deck.sort(function() {return Math.random() - 0.5;});
-	communityChestCards.deck.sort(function() {return Math.random() - 0.5;});
+	//communityChestCards.deck.sort(function() {return Math.random() - 0.5;});
 
 	// $("#playernumber").on("change", playernumber_onchange);
 	// playernumber_onchange();

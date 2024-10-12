@@ -116,23 +116,22 @@ square[39] = new Square("Titled Towers", "$400", "#0000FF", 400, 10, 50, 200, 60
 var communityChestCards = [];
 var chanceCards = [];
 
-communityChestCards[0] = new Card("Get out of Jail, Free. This card may be kept until needed or sold.", function(p) { p.communityChestJailCard = true; updateOwned();});
-communityChestCards[1] = new Card("You have won second prize in a beauty contest. Collect $10.", function() { addamount(10, 'Community Chest');});
-communityChestCards[2] = new Card("From sale of stock, you get $50.", function() { addamount(50, 'Community Chest');});
-communityChestCards[3] = new Card("Life insurance matures. Collect $100.", function() { addamount(100, 'Community Chest');});
-communityChestCards[4] = new Card("Income tax refund. Collect $20.", function() { addamount(20, 'Community Chest');});
-communityChestCards[5] = new Card("Holiday fund matures. Receive $100.", function() { addamount(100, 'Community Chest');});
-communityChestCards[6] = new Card("You inherit $100.", function() { addamount(100, 'Community Chest');});
-communityChestCards[7] = new Card("Receive $25 consultancy fee.", function() { addamount(25, 'Community Chest');});
-communityChestCards[8] = new Card("Pay hospital fees of $100.", function() { subtractamount(100, 'Community Chest');});
-communityChestCards[9] = new Card("Bank error in your favor. Collect $200.", function() { addamount(200, 'Community Chest');});
-communityChestCards[10] = new Card("Pay school fees of $50.", function() { subtractamount(50, 'Community Chest');});
-communityChestCards[11] = new Card("Doctor's fee. Pay $50.", function() { subtractamount(50, 'Community Chest');});
-communityChestCards[12] = new Card("It is your birthday. Collect $10 from every player.", function() { collectfromeachplayer(10, 'Community Chest');});
-communityChestCards[13] = new Card("Advance to \"GO\" (Collect $200).", function() { advance(0);});
-communityChestCards[14] = new Card("You are assessed for street repairs. $40 per house. $115 per hotel.", function() { streetrepairs(40, 115);});
-communityChestCards[15] = new Card("Go to Jail. Go directly to Jail. Do not pass \"GO\". Do not collect $200.", function() { gotojail();});
-
+communityChestCards[0] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", function(){ flappyPopUp();});
+communityChestCards[1] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
+communityChestCards[2] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[3] =new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
+communityChestCards[4] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[5] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
+communityChestCards[6] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[7] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
+communityChestCards[8] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[9] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
+communityChestCards[10] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[11] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
+communityChestCards[12] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[13] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
+communityChestCards[14] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[15] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
 
 chanceCards[0] = new Card("GET OUT OF JAIL FREE. This card may be kept until needed or traded.", function(p) { p.chanceJailCard=true; updateOwned();});
 chanceCards[1] = new Card("Make General Repairs on All Your Property. For each house pay $25. For each hotel $100.", function() { streetrepairs(25, 100);});
@@ -150,3 +149,49 @@ chanceCards[12] = new Card("Your building loan matures. Collect $150.", function
 chanceCards[13] = new Card("ADVANCE TO THE NEAREST RAILROAD. If UNOWNED, you may buy it from the Bank. If OWNED, pay owner twice the rental to which they are otherwise entitled.", function() { advanceToNearestRailroad();});
 chanceCards[14] = new Card("ADVANCE to St. Charles Place. If you pass \"GO\" collect $200.", function() { advance(11);});
 chanceCards[15] = new Card("Go to Jail. Go Directly to Jail. Do not pass \"GO\". Do not collect $200.", function() { gotojail();});
+
+function flappyPopUp() {
+
+		const popupWindow = window.open('', 'GamePopup', 'width=325,height=1000,scrollbars=no');
+  
+		// Write the HTML structure inside the popup with proper template literal
+		popupWindow.document.write(`
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+		  <meta charset="UTF-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+	  
+		  <title>Flappy Bird Game</title>   
+		  
+		</head>
+		<body>
+		  <canvas id="canvas" width="300" height="500"></canvas>
+		</body>
+		<script src="static/monjs/fb_game.js"></script>
+		</html>
+	  `);
+
+		popupWindow.document.close();
+}
+
+function openDinoRunPopup(){
+	const popupWindow = window.open('', 'GamePopup', 'width=800,height=300,scrollbars=no');
+
+	popupWindow.document.write(`
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+		  <meta charset="UTF-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+	  
+		  <title>Dino Run Game</title>   
+		  
+		</head>
+		<body>
+		  <canvas id="canvas" width="800" height="200"></canvas>
+		</body>
+		<script src="static/monjs/dr_game_index.js"></script>
+		</html>
+	  `);
+}
