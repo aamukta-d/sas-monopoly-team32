@@ -18,6 +18,7 @@
 	<script type="text/javascript" src="{{ url_for('static', filename='monjs/jquery-ui.min.js') }}"></script>
 	
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/monopoly.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/skidi.css') }}" />
 </head>
 
 <body>
@@ -451,6 +452,10 @@
 			</tr>
 		</table>
 	</div>
+	
+	<img src="{{ url_for('static', filename='images/skidi.png') }}" id="floating-skidi" alt="Skidi">
+	<script type="text/javascript" src="{{ url_for('static', filename='monjs/skidi.js') }}"></script> <!-- wheel-->
+
 
 	<div id="trade">
 		<input type="button" id="goBackButton" value="<< Back to Monopoly game" 
