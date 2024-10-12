@@ -178,6 +178,28 @@
 		</tr>
 	</table>
 
+	<div id="subway-surfers-wrapper">
+		<video id="subway-surfers" autoplay loop muted>
+			<source src="{{ url_for('static', filename='videos/Subway_Surfers_No Copyright.mp4') }}" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>	
+	</div>
+	<script>
+		        // Get the video element
+        const video = document.getElementById('subway-surfers');
+
+        // Wait for the video metadata to load
+        video.addEventListener('loadedmetadata', function() {
+            const randomTime = Math.random() * video.duration; // Generate a random time between 0 and video duration
+            video.currentTime = randomTime; // Set the video to start at the random time
+        });
+
+        // Optional: Handle errors
+        video.addEventListener('error', function(e) {
+            console.error('Error loading video:', e);
+        });
+	</script>
+
 	<div id="wheelDiv">
 		<canvas id="wheelCanvas" width="50" height="50" style="border:10px solid #000000;">CANVAS</canvas>
 	WHEEL GOES HERE

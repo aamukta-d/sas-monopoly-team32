@@ -829,3 +829,16 @@ td {
 	width: 15px;
 
 }
+
+video {
+	height: 90vh; /* Full height of the viewport */
+	width: auto; /* Adjust width accordingly */
+	position: absolute; /* Position the video absolutely */
+	left: 1000px;
+}
+
+#subway-surfers-wrapper {
+	flex-grow: 1; /* Allow the video container to grow */
+	position: relative; /* For absolute positioning of the video */
+	padding: 20px; /* Padding around the video */
+}
