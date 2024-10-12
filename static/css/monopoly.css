@@ -762,6 +762,7 @@ td {
 	position: relative;
 	bottom: 0px;
 	left: 0px;
+	background-color: white
 }
 
 .cell-name {

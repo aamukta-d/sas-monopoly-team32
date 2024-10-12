@@ -2434,6 +2434,8 @@ function play() {
 	}
 
 	updateMoney();
+	var money = document.getElementById("p" + turn.toString() + "money").textContent;
+	var moneyName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
 	updatePosition();
 	updateOwned();
 
