@@ -2626,6 +2626,7 @@ window.onload = function() {
 
 	var currentCell;
 	var currentCellAnchor;
+	var currentColorStrip;
 	var currentCellPositionHolder;
 	var currentCellName;
 	var currentCellOwner;
@@ -2643,6 +2644,15 @@ window.onload = function() {
 		currentCellPositionHolder.id = "cell" + i + "positionholder";
 		currentCellPositionHolder.className = "cell-position-holder";
 		currentCellPositionHolder.enlargeId = "enlarge" + i;
+
+		// All the colr strips set here:
+		currentColorStrip = currentCell.appendChild(document.createElement("div"));
+		currentColorStrip.id = "ColorStrip" + i + "";
+		currentColorStrip.className = "color-strip";
+		document.getElementById("ColorStrip" + i + "").style.backgroundColor = s.color;
+		document.getElementById("ColorStrip" + i + "").style.width = "100%";
+		document.getElementById("ColorStrip" + i + "").style.height = "10px";
+
 
 		currentCellName = currentCellAnchor.appendChild(document.createElement("div"));
 		currentCellName.id = "cell" + i + "name";
