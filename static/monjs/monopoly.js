@@ -40,6 +40,7 @@ function Game() {
 
 	};
 
+
 	// Trade functions:
 
 
@@ -2397,7 +2398,7 @@ function play() {
 }
 
 function setup() {
-	pcount = parseInt(document.getElementById("playernumber").value, 10);
+	pcount = 4;
 
 	var playerArray = new Array(pcount);
 	var p;
@@ -2472,7 +2473,7 @@ function getCheckedProperty() {
 // }
 
 function playernumber_onchange() {
-	pcount = parseInt(document.getElementById("playernumber").value, 10);
+	pcount = 4;
 
 	$(".player-input").hide();
 
@@ -2544,8 +2545,8 @@ window.onload = function() {
 	chanceCards.deck.sort(function() {return Math.random() - 0.5;});
 	communityChestCards.deck.sort(function() {return Math.random() - 0.5;});
 
-	$("#playernumber").on("change", playernumber_onchange);
-	playernumber_onchange();
+	// $("#playernumber").on("change", playernumber_onchange);
+	// playernumber_onchange();
 
 	$("#nextbutton").click(game.next);
 	$("#noscript").hide();

@@ -4,6 +4,8 @@ body {
 	min-width: 1075px;
 }
 
+
+
 td {
 	font-size: 12px;
 	font-family: arial, sans-serif;
@@ -12,7 +14,7 @@ td {
 }
 
 #setup {
-	display: none;
+	
 	margin: 15px;
 }
 
