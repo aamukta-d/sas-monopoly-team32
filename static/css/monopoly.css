@@ -886,20 +886,7 @@ video {
 
 
 #logo {
-	display:none;
-	max-width: 25%; /* Responsive image */
-	width:800px;
-	height: 600px;
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 20px; /* Optional: Space from the left */
-	padding-top: 750px;
-	padding-right: 350px;
-
-	position: absolute; /* Use absolute positioning */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to truly center the image */
-    max-width: 100%; /* Ensure image is responsive */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 2; /* Ensure the image is on top */
+	display: none;
+	max-width: 500px;
+	height: 65px;
 }
