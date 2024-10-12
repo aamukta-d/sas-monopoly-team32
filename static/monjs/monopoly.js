@@ -2641,6 +2641,29 @@ window.onload = function() {
 		s = square[i];
 
 		currentCell = document.getElementById("cell" + i);
+		document.getElementById("cell" + i + "").style.height = "60px";
+
+
+		// All the colr strips set here:
+		if (s.color != "#FFFFFF") {
+			currentColorStrip = currentCell.appendChild(document.createElement("div"));
+			currentColorStrip.id = "ColorStrip" + i + "";
+			currentColorStrip.className = "color-strip";
+			document.getElementById("ColorStrip" + i + "").style.backgroundColor = s.color;
+			document.getElementById("ColorStrip" + i + "").style.width = "100%";
+			document.getElementById("ColorStrip" + i + "").style.height = "12px";
+			document.getElementById("ColorStrip" + i + "").style.border = "1px solid black";
+			// document.getElementById("ColorStrip" + i + "").style.position = "absolute";
+		} else {
+			currentColorStrip = currentCell.appendChild(document.createElement("div"));
+			currentColorStrip.id = "ColorStrip" + i + "";
+			currentColorStrip.className = "color-strip";
+			document.getElementById("ColorStrip" + i + "").style.backgroundColor = s.color;
+			document.getElementById("ColorStrip" + i + "").style.width = "100%";
+			document.getElementById("ColorStrip" + i + "").style.height = "12px";
+			document.getElementById("ColorStrip" + i + "").style.border = "1px solid black";
+			document.getElementById("ColorStrip" + i + "").style.borderBottom = "none";
+		}	
 
 		currentCellAnchor = currentCell.appendChild(document.createElement("div"));
 		currentCellAnchor.id = "cell" + i + "anchor";
@@ -2650,15 +2673,10 @@ window.onload = function() {
 		currentCellPositionHolder.id = "cell" + i + "positionholder";
 		currentCellPositionHolder.className = "cell-position-holder";
 		currentCellPositionHolder.enlargeId = "enlarge" + i;
-
-		// All the colr strips set here:
-		currentColorStrip = currentCell.appendChild(document.createElement("div"));
-		currentColorStrip.id = "ColorStrip" + i + "";
-		currentColorStrip.className = "color-strip";
-		document.getElementById("ColorStrip" + i + "").style.backgroundColor = s.color;
-		document.getElementById("ColorStrip" + i + "").style.width = "100%";
-		document.getElementById("ColorStrip" + i + "").style.height = "10px";
-
+		
+		if (s.color == "#FFFFFF") {
+			document.getElementById("cell" + i + "positionholder").style.borderTop = "none";
+		}
 
 		currentCellName = currentCellAnchor.appendChild(document.createElement("div"));
 		currentCellName.id = "cell" + i + "name";
