@@ -102,7 +102,7 @@ function citytax() {
 
 var square = [];
 
-square[0] = new Square("EDGE", "COLLECT $200 SALARY AS YOU PASS.", "#FFFFFF");
+square[0] = new Square("GO", "COLLECT $200 SALARY AS YOU PASS.", "#FFFFFF");
 square[1] = new Square("Rizz Lane", "$60", "#8B4513", 60, 3, 2, 10, 30, 90, 160, 250);
 square[2] = new Square("MINIGAME", "WIN A PRIZE", "#FFFFFF");
 square[3] = new Square("Ohio", "$60", "#8B4513", 60, 3, 4, 20, 60, 180, 320, 450);
