@@ -146,21 +146,21 @@ square[39] = new Square("Tilted Towers", "$400", "#0000FF", 400, 10, 50, 200, 60
 var communityChestCards = [];
 var chanceCards = [];
 
-communityChestCards[0] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", function(){ flappyPopUp();});
+communityChestCards[0] = new Card("Flappy Imposter MiniGame: get to 3 points to get $500!", flappyPopUp);
 communityChestCards[1] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
-communityChestCards[2] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[2] = new Card("Flappy Imposter MiniGame: get to 3 points to get $500!", flappyPopUp);
 communityChestCards[3] =new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
-communityChestCards[4] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[4] = new Card("Flappy Imposter MiniGame: get to 3 points to get $500!", flappyPopUp);
 communityChestCards[5] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
-communityChestCards[6] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[6] = new Card("Flappy Imposter MiniGame: get to 3 points to get $500!", flappyPopUp);
 communityChestCards[7] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
-communityChestCards[8] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[8] = new Card("Flappy Imposter MiniGame: get to 3 points to get $500!", flappyPopUp);
 communityChestCards[9] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
-communityChestCards[10] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[10] = new Card("Flappy Imposter MiniGame: get to 3 points to get $500!", flappyPopUp);
 communityChestCards[11] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
-communityChestCards[12] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[12] = new Card("Flappy Imposter MiniGame: get to 3 points to get $500!", flappyPopUp);
 communityChestCards[13] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
-communityChestCards[14] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", flappyPopUp);
+communityChestCards[14] = new Card("Flappy Imposter MiniGame: get to 3 points to get $500!", flappyPopUp);
 communityChestCards[15] = new Card("Dino Run MiniGame: the higher your score, the more dollars you get!", openDinoRunPopup);
 
 chanceCards[0] = new Card("GET OUT OF THE BACKROOMS FREE. This card may be kept until needed or traded.", function(p) { p.chanceJailCard=true; updateOwned();});
