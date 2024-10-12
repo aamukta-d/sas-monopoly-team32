@@ -2349,23 +2349,25 @@ function roll() {
 }
 
 function play() {
-	if (turns > maxTurns){
+	if (turns >= maxTurns){ 
 		var mostMoney = 0;
-		var winner = null;
-		for(let i = 0; i < pcount; i++){
-			if(player[i].money > mostMoney){
-				mostMoney = player[i].money;
+		var winner = 0;
+		for(let i = 1; i <= pcount; i++){
+			var money = document.getElementById("p" + i.toString() + "money").textContent;
+			if(money > mostMoney){  //p.money returns 1500 no matter what 
+				mostMoney = money;
 				winner = i;
 			}
 		}
-		winnerName = player[winner].name;
+		var winName =  document.getElementById("p" + winner.toString() + "moneyname").textContent;
 		$("*").hide();
-		alert(winnerName + " has won the game. \nRefresh to play another.");
+		alert(winName + " has won the game. \nRefresh to play another.");
 	}
 
 
 	turn++;
-	turns++
+	turns++;
+	document.getElementById("turnTimer").innerHTML = "Turn " + turns + " of " + maxTurns;
 	if (turn > pcount) {
 		turn -= pcount;
 	}
@@ -2442,6 +2444,7 @@ function setup() {
 	var p;
 
 	maxTurns = document.getElementById("maxTurns").value;
+	maxTurns = maxTurns * pcount;
 	turns = 0;
 
 	playerArray.randomize();
