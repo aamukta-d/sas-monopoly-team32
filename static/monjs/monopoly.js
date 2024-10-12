@@ -2684,12 +2684,10 @@ window.onload = function() {
 			currentColorStrip = currentCell.appendChild(document.createElement("div"));
 			currentColorStrip.id = "ColorStrip" + i + "";
 			currentColorStrip.className = "color-strip";
-			document.getElementById("ColorStrip" + i + "").style.backgroundColor = s.color;
+			document.getElementById("ColorStrip" + i + "").style.backgroundColor = "#DeDeDe";
 			document.getElementById("ColorStrip" + i + "").style.width = "100%";
 			document.getElementById("ColorStrip" + i + "").style.height = "12px";
-			document.getElementById("ColorStrip" + i + "").style.border = "1px solid black";
-			document.getElementById("ColorStrip" + i + "").style.borderBottom = "none";
-		}	
+			document.getElementById("ColorStrip" + i + "").style.border = "1px solid black";		}	
 
 		currentCellAnchor = currentCell.appendChild(document.createElement("div"));
 		currentCellAnchor.id = "cell" + i + "anchor";
