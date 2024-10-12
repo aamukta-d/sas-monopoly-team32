@@ -49,11 +49,33 @@ function corrections() {
 	document.getElementById("enlarge7token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
 	document.getElementById("enlarge8token").innerHTML += '<img src="' + IMAGE_URL + 'sigma.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
 	document.getElementById("enlarge9token").innerHTML += '<img src="' + IMAGE_URL + 'alpha.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge11token").innerHTML += '<img src="' + IMAGE_URL + 'beta.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge12token").innerHTML += '<img src="' + IMAGE_URL + 'sas.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge13token").innerHTML += '<img src="' + IMAGE_URL + 'goofy.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge14token").innerHTML += '<img src="' + IMAGE_URL + 'grimace.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
 	document.getElementById("enlarge15token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge16token").innerHTML += '<img src="' + IMAGE_URL + 'pog.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge17token").innerHTML += '<img src="' + IMAGE_URL + 'minigame.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge18token").innerHTML += '<img src="' + IMAGE_URL + 'nugget.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge19token").innerHTML += '<img src="' + IMAGE_URL + 'gigachad.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge21token").innerHTML += '<img src="' + IMAGE_URL + 'skibidi.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge22token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge23token").innerHTML += '<img src="' + IMAGE_URL + 'sin_city.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge24token").innerHTML += '<img src="' + IMAGE_URL + 'fnaf.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
 	document.getElementById("enlarge25token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge26token").innerHTML += '<img src="' + IMAGE_URL + 'gyat.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge27token").innerHTML += '<img src="' + IMAGE_URL + 'demure.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge28token").innerHTML += '<img src="' + IMAGE_URL + 'rizz_party.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge29token").innerHTML += '<img src="' + IMAGE_URL + 'brat.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge31token").innerHTML += '<img src="' + IMAGE_URL + 'cap.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge32token").innerHTML += '<img src="' + IMAGE_URL + 'aura.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge33token").innerHTML += '<img src="' + IMAGE_URL + 'minigame.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge34token").innerHTML += '<img src="' + IMAGE_URL + 'yap.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
 	document.getElementById("enlarge35token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge12token").innerHTML += '<img src="' + IMAGE_URL + 'electric_icon.png" height="60" width="48" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge28token").innerHTML += '<img src="' + IMAGE_URL + 'water_icon.png" height="60" width="78" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge36token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge37token").innerHTML += '<img src="' + IMAGE_URL + 'johnpork.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge38token").innerHTML += '<img src="' + IMAGE_URL + 'antifanum.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge39token").innerHTML += '<img src="' + IMAGE_URL + 'tilted.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
 }
 
 function utiltext() {
@@ -97,12 +119,12 @@ square[13] = new Square("Goofy Ahh Avenue", "$140", "#FF0080", 140, 5, 10, 50, 1
 square[14] = new Square("Grimace Shake Avenue", "$160", "#FF0080", 160, 5, 12, 60, 180, 500, 700, 900);
 square[15] = new Square("Chungus Station", "$200", "#FFFFFF", 200, 1);
 square[16] = new Square("Poggers Place", "$180", "#FFA500", 180, 6, 14, 70, 200, 550, 750, 950);
-square[17] = new Square("MINIGAME", "PLAY THE MINIGAME TO WIN A PRIZE", "#FFFFFF");
+square[17] = new Square("MINIGAME", "WIN A PRIZE", "#FFFFFF");
 square[18] = new Square("Chicken Nugget Avenue", "$180", "#FFA500", 180, 6, 14, 70, 200, 550, 750, 950);
 square[19] = new Square("GigaChad Avenue", "$200", "#FFA500", 200, 6, 16, 80, 220, 600, 800, 1000);
 square[20] = new Square("Free Parking", "", "#FFFFFF");
 square[21] = new Square("Skibidi Street", "$220", "#FF0000", 220, 7, 18, 90, 250, 700, 875, 1050);
-square[22] = new Square("Chance", "FOLLOW INSTRUCTIONS ON TOP CARD", "#FFFFFF");
+square[22] = new Square("Chance", "FOLLOW INSTRUCTIONS", "#FFFFFF");
 square[23] = new Square("Sin City", "$220", "#FF0000", 220, 7, 18, 90, 250, 700, 875, 1050);
 square[24] = new Square("FNAF Avenue", "$240", "#FF0000", 240, 7, 20, 100, 300, 750, 925, 1100);
 square[25] = new Square("Mewing Station", "$200", "#FFFFFF", 200, 1);
@@ -113,10 +135,10 @@ square[29] = new Square("Brat Gardens", "$280", "#FFFF00", 280, 8, 24, 120, 360,
 square[30] = new Square("Go to the Backrooms", "You have been sent to the Backrooms. What an L.Do not collect $200.", "#FFFFFF");
 square[31] = new Square("Cap Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
 square[32] = new Square("Aura Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
-square[33] = new Square("MINIGAME", "PLAY THE MINIGAME TO WIN A PRIZE", "#FFFFFF");
+square[33] = new Square("MINIGAME", "WIN A PRIZE", "#FFFFFF");
 square[34] = new Square("Yapping Avenue", "$320", "#008000", 320, 9, 28, 150, 450, 1000, 1200, 1400);
 square[35] = new Square("Zesty Station", "$200", "#FFFFFF", 200, 1);
-square[36] = new Square("Chance", "FOLLOW INSTRUCTIONS ON TOP CARD", "#FFFFFF");
+square[36] = new Square("Chance", "FOLLOW INSTRUCTIONS", "#FFFFFF");
 square[37] = new Square("John Pork Place", "$350", "#0000FF", 350, 10, 35, 175, 500, 1100, 1300, 1500);
 square[38] = new Square("Anti Fanum Tax", "Pay $100", "#FFFFFF");
 square[39] = new Square("Tilted Towers", "$400", "#0000FF", 400, 10, 50, 200, 600, 1400, 1700, 2000);
