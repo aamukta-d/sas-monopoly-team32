@@ -7,6 +7,16 @@ function Game() {
 	var die2;
 	var areDiceRolled = false;
 
+	//call to go back to the main Monopoly game
+	this.backToGame = function() {
+		$("#board").show();
+		$("#moneybarwrap").show();
+		$("#control").show();
+		$("#wheelDiv").show();
+		$("#subway-surfers-wrapper").show();
+		$("#trade").hide();
+	}
+
 	this.rollDice = function() {
 		die1 = Math.floor(Math.random() * 6) + 1;
 		die2 = Math.floor(Math.random() * 6) + 1;
@@ -511,6 +521,7 @@ function Game() {
 		$("#canceltradebutton").show();
 		$("#accepttradebutton").hide();
 		$("#rejecttradebutton").hide();
+		$("#subway-surfers-wrapper").hide();
 
 		if (tradeObj instanceof Trade) {
 			writeTrade(tradeObj);
@@ -528,10 +539,7 @@ function Game() {
 
 
 	this.cancelTrade = function() {
-		$("#board").show();
-		$("#control").show();
-		$("#trade").hide();
-
+		this.backToGame()
 
 		if (!player[turn].human) {
 			player[turn].AI.alertList = "";
