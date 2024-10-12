@@ -1,0 +1,7 @@
+
+#floating-skidi {
+    position: absolute;
+    width: 120px; /* Adjust size */
+    height: 120px;
+    transition: transform 5s ease-in-out; /* Smooth movement */
+}

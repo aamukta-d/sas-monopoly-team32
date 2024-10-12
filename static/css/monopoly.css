@@ -1,5 +1,5 @@
 body {
-	background: #FFFFFF;
+	background: #6C584C;
 	margin: 0px;
 	min-width: 1075px;
 }
@@ -64,6 +64,7 @@ td {
 }
 
 #board {
+	background: #d4e8d3;
 	display: none;
 	border: 2px solid black;
 	border-spacing: 3px;
@@ -618,6 +619,21 @@ td {
 	height: 72px;
 }
 
+.button {
+	background-color: #ac1a1a;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 0.75rem;
+	min-width: 100px;
+	min-height: 30px;
+  }
+
+.button:hover {
+	background-color: #cc782a;
+}
+
 .enlarge {
 	width: 150px;
 	height: 200px;
@@ -747,6 +763,7 @@ td {
 	position: relative;
 	bottom: 0px;
 	left: 0px;
+	background-color: white
 }
 
 .cell-name {
@@ -762,6 +779,7 @@ td {
 	height: 100%;
 	z-index: 1;
 	position: relative;
+	border: 1px solid black;
 }
 
 .cell-position {
@@ -841,4 +859,23 @@ video {
 	flex-grow: 1; /* Allow the video container to grow */
 	position: relative; /* For absolute positioning of the video */
 	padding: 20px; /* Padding around the video */
+}
+
+#logo {
+	display:none;
+	max-width: 25%; /* Responsive image */
+	width:800px;
+	height: 600px;
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Optional: Space from the left */
+	padding-top: 750px;
+	padding-right: 350px;
+
+	position: absolute; /* Use absolute positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center the image */
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 2; /* Ensure the image is on top */
 }

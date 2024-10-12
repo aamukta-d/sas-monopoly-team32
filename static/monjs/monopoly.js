@@ -13,7 +13,7 @@ function Game() {
 		$("#board").show();
 		$("#moneybarwrap").show();
 		$("#control").show();
-		$("#wheelDiv").show();
+		$("#wheelDiv").hide();
 		$("#subway-surfers-wrapper").show();
 		$("#trade").hide();
 	}
@@ -284,7 +284,7 @@ function Game() {
 			currentTableCellCheckbox = currentTableCell.appendChild(document.createElement("input"));
 			currentTableCellCheckbox.type = "checkbox";
 			currentTableCellCheckbox.id = "tradeleftcheckbox40";
-			currentTableCellCheckbox.title = "Check this box to include this Get Out of Jail Free Card in the trade.";
+			currentTableCellCheckbox.title = "Check this box to include this Get Out of the Backrooms Free Card in the trade.";
 
 			currentTableCell = currentTableRow.appendChild(document.createElement("td"));
 			currentTableCell.className = "propertycellcolor";
@@ -294,7 +294,7 @@ function Game() {
 			currentTableCell = currentTableRow.appendChild(document.createElement("td"));
 			currentTableCell.className = "propertycellname";
 
-			currentTableCell.textContent = "Get Out of Jail Free Card";
+			currentTableCell.textContent = "Get Out of the Backrooms Free Card";
 		} else if (recipient.communityChestJailCard) {
 			currentTableRow = recipientSideTable.appendChild(document.createElement("tr"));
 			currentTableRow.onclick = tableRowOnClick;
@@ -304,7 +304,7 @@ function Game() {
 			currentTableCellCheckbox = currentTableCell.appendChild(document.createElement("input"));
 			currentTableCellCheckbox.type = "checkbox";
 			currentTableCellCheckbox.id = "traderightcheckbox40";
-			currentTableCellCheckbox.title = "Check this box to include this Get Out of Jail Free Card in the trade.";
+			currentTableCellCheckbox.title = "Check this box to include this Get Out of the Backrooms Free Card in the trade.";
 
 			currentTableCell = currentTableRow.appendChild(document.createElement("td"));
 			currentTableCell.className = "propertycellcolor";
@@ -314,7 +314,7 @@ function Game() {
 			currentTableCell = currentTableRow.appendChild(document.createElement("td"));
 			currentTableCell.className = "propertycellname";
 
-			currentTableCell.textContent = "Get Out of Jail Free Card";
+			currentTableCell.textContent = "Get Out of the Backrooms Free Card";
 		}
 
 		if (initiator.chanceJailCard) {
@@ -326,7 +326,7 @@ function Game() {
 			currentTableCellCheckbox = currentTableCell.appendChild(document.createElement("input"));
 			currentTableCellCheckbox.type = "checkbox";
 			currentTableCellCheckbox.id = "tradeleftcheckbox41";
-			currentTableCellCheckbox.title = "Check this box to include this Get Out of Jail Free Card in the trade.";
+			currentTableCellCheckbox.title = "Check this box to include this Get Out of the Backrooms Free Card in the trade.";
 
 			currentTableCell = currentTableRow.appendChild(document.createElement("td"));
 			currentTableCell.className = "propertycellcolor";
@@ -336,7 +336,7 @@ function Game() {
 			currentTableCell = currentTableRow.appendChild(document.createElement("td"));
 			currentTableCell.className = "propertycellname";
 
-			currentTableCell.textContent = "Get Out of Jail Free Card";
+			currentTableCell.textContent = "Get Out of the Backrooms Free Card";
 		} else if (recipient.chanceJailCard) {
 			currentTableRow = recipientSideTable.appendChild(document.createElement("tr"));
 			currentTableRow.onclick = tableRowOnClick;
@@ -346,7 +346,7 @@ function Game() {
 			currentTableCellCheckbox = currentTableCell.appendChild(document.createElement("input"));
 			currentTableCellCheckbox.type = "checkbox";
 			currentTableCellCheckbox.id = "traderightcheckbox41";
-			currentTableCellCheckbox.title = "Check this box to include this Get Out of Jail Free Card in the trade.";
+			currentTableCellCheckbox.title = "Check this box to include this Get Out of the Backrooms Free Card in the trade.";
 
 			currentTableCell = currentTableRow.appendChild(document.createElement("td"));
 			currentTableCell.className = "propertycellcolor";
@@ -356,7 +356,7 @@ function Game() {
 			currentTableCell = currentTableRow.appendChild(document.createElement("td"));
 			currentTableCell.className = "propertycellname";
 
-			currentTableCell.textContent = "Get Out of Jail Free Card";
+			currentTableCell.textContent = "Get Out of the Backrooms Free Card";
 		}
 
 		if (initiatorSideTable.lastChild) {
@@ -624,21 +624,21 @@ function Game() {
 		if (tradeObj.getCommunityChestJailCard() === 1) {
 			initiator.communityChestJailCard = false;
 			recipient.communityChestJailCard = true;
-			addAlert(recipient.name + ' received a "Get Out of Jail Free" card from ' + initiator.name + ".");
+			addAlert(recipient.name + ' received a "Get Out of the Backrooms Free" card from ' + initiator.name + ".");
 		} else if (tradeObj.getCommunityChestJailCard() === -1) {
 			initiator.communityChestJailCard = true;
 			recipient.communityChestJailCard = false;
-			addAlert(initiator.name + ' received a "Get Out of Jail Free" card from ' + recipient.name + ".");
+			addAlert(initiator.name + ' received a "Get Out of the Backrooms Free" card from ' + recipient.name + ".");
 		}
 
 		if (tradeObj.getChanceJailCard() === 1) {
 			initiator.chanceJailCard = false;
 			recipient.chanceJailCard = true;
-			addAlert(recipient.name + ' received a "Get Out of Jail Free" card from ' + initiator.name + ".");
+			addAlert(recipient.name + ' received a "Get Out of the Backrooms Free" card from ' + initiator.name + ".");
 		} else if (tradeObj.getChanceJailCard() === -1) {
 			initiator.chanceJailCard = true;
 			recipient.chanceJailCard = false;
-			addAlert(initiator.name + ' received a "Get Out of Jail Free" card from ' + recipient.name + ".");
+			addAlert(initiator.name + ' received a "Get Out of the Backrooms Free" card from ' + recipient.name + ".");
 		}
 
 		// Exchange money.
@@ -971,7 +971,7 @@ function Player(name, color) {
 // communityChestJailCard: integer, 1 means offered, -1 means requested, 0 means neither
 // chanceJailCard: integer, 1 means offered, -1 means requested, 0 means neither
 function Trade(initiator, recipient, money, property, communityChestJailCard, chanceJailCard) {
-	// For each property and get out of jail free cards, 1 means offered, -1 means requested, 0 means neither.
+	// For each property and Get Out of the Backrooms free cards, 1 means offered, -1 means requested, 0 means neither.
 
 	this.getInitiator = function() {
 		return initiator;
@@ -1003,6 +1003,7 @@ var pcount;
 var turn = 0, doublecount = 0;
 var turns = 0;
 var maxTurns = 20;
+var maxMoney = 20000;
 // Overwrite an array with numbers from one to the array's length in a random order.
 Array.prototype.randomize = function(length) {
 	length = (length || this.length);
@@ -1323,7 +1324,7 @@ function updateOwned() {
 			firstproperty = 40;
 			HTML += "<table>";
 		}
-		HTML += "<tr class='property-cell-row'><td class='propertycellcheckbox'><input type='checkbox' id='propertycheckbox40' /></td><td class='propertycellcolor' style='background: white;'></td><td class='propertycellname'>Get Out of Jail Free Card</td></tr>";
+		HTML += "<tr class='property-cell-row'><td class='propertycellcheckbox'><input type='checkbox' id='propertycheckbox40' /></td><td class='propertycellcolor' style='background: white;'></td><td class='propertycellname'>Get Out of the Backrooms Free Card</td></tr>";
 
 	}
 	if (p.chanceJailCard) {
@@ -1331,7 +1332,7 @@ function updateOwned() {
 			firstproperty = 41;
 			HTML += "<table>";
 		}
-		HTML += "<tr class='property-cell-row'><td class='propertycellcheckbox'><input type='checkbox' id='propertycheckbox41' /></td><td class='propertycellcolor' style='background: white;'></td><td class='propertycellname'>Get Out of Jail Free Card</td></tr>";
+		HTML += "<tr class='property-cell-row'><td class='propertycellcheckbox'><input type='checkbox' id='propertycheckbox41' /></td><td class='propertycellcolor' style='background: white;'></td><td class='propertycellname'>Get Out of the Backrooms Free Card</td></tr>";
 	}
 
 	if (HTML === "") {
@@ -1555,7 +1556,7 @@ function chanceCommunityChest() {
 	} else if (p.position === 7 || p.position === 22 || p.position === 36) {
 		var chanceIndex = chanceCards.deck[chanceCards.index];
 
-		// Remove the get out of jail free card from the deck.
+		// Remove the Get Out of the Backrooms free card from the deck.
 		if (chanceIndex === 0) {
 			chanceCards.deck.splice(chanceCards.index, 1);
 		}
@@ -1626,10 +1627,10 @@ function subtractamount(amount, cause) {
 	addAlert(p.name + " lost $" + amount + " from " + cause + ".");
 }
 
-function gotojail() {
+function gotobackrooms() {
 	var p = player[turn];
-	addAlert(p.name + " was sent directly to jail.");
-	document.getElementById("landed").innerHTML = "You are in jail.";
+	addAlert(p.name + " was sent directly to the Backrooms.");
+	document.getElementById("landed").innerHTML = "You are in the Backrooms.";
 
 	p.jail = true;
 	doublecount = 0;
@@ -1720,7 +1721,7 @@ function advance(destination, pass) {
 	land();
 }
 
-function advanceToNearestUtility() {
+function advanceToNearestParty() {
 	var p = player[turn];
 
 	if (p.position < 12) {
@@ -1736,7 +1737,7 @@ function advanceToNearestUtility() {
 	land(true);
 }
 
-function advanceToNearestRailroad() {
+function advanceToNearestParty() {
 	var p = player[turn];
 
 	updatePosition();
@@ -1795,7 +1796,7 @@ function payfifty() {
 	p.position = 10;
 	p.pay(50, 0);
 
-	addAlert(p.name + " paid the $50 fine to get out of jail.");
+	addAlert(p.name + " paid the $50 fine to Get Out of the Backrooms.");
 	updateMoney();
 	updatePosition();
 }
@@ -1817,7 +1818,7 @@ function useJailCard() {
 	if (p.communityChestJailCard) {
 		p.communityChestJailCard = false;
 
-		// Insert the get out of jail free card back into the community chest deck.
+		// Insert the Get Out of the Backrooms free card back into the community chest deck.
 		communityChestCards.deck.splice(communityChestCards.index, 0, 0);
 
 		communityChestCards.index++;
@@ -1828,7 +1829,7 @@ function useJailCard() {
 	} else if (p.chanceJailCard) {
 		p.chanceJailCard = false;
 
-		// Insert the get out of jail free card back into the chance deck.
+		// Insert the Get Out of the Backrooms free card back into the chance deck.
 		chanceCards.deck.splice(chanceCards.index, 0, 0);
 
 		chanceCards.index++;
@@ -1838,7 +1839,7 @@ function useJailCard() {
 		}
 	}
 
-	addAlert(p.name + " used a \"Get Out of Jail Free\" card.");
+	addAlert(p.name + " used a \"Get Out of the Backrooms Free\" card.");
 	updateOwned();
 	updatePosition();
 }
@@ -1962,7 +1963,7 @@ function showStats() {
 				write = true;
 				HTML += "<table>";
 			}
-			HTML += "<tr><td class='statscellcolor'></td><td class='statscellname'>Get Out of Jail Free Card</td></tr>";
+			HTML += "<tr><td class='statscellcolor'></td><td class='statscellname'>Get Out of the Backrooms Free Card</td></tr>";
 
 		}
 		if (p.chanceJailCard) {
@@ -1970,7 +1971,7 @@ function showStats() {
 				write = true;
 				HTML += "<table>";
 			}
-			HTML += "<tr><td class='statscellcolor'></td><td class='statscellname'>Get Out of Jail Free Card</td></tr>";
+			HTML += "<tr><td class='statscellcolor'></td><td class='statscellname'>Get Out of the Backrooms Free Card</td></tr>";
 
 		}
 
@@ -2128,7 +2129,8 @@ function land(increasedRent) {
 				buy();
 			}
 		} else {
-			document.getElementById("landed").innerHTML = "<div>You landed on <a href='javascript:void(0);' onmouseover='showdeed(" + p.position + ");' onmouseout='hidedeed();' class='statscellcolor'>" + s.name + "</a>.<input type='button' onclick='buy();' value='Buy ($" + s.price + ")' title='Buy " + s.name + " for " + s.pricetext + ".'/></div>";
+			//added button styling below
+			document.getElementById("landed").innerHTML = "<div>You landed on <a href='javascript:void(0);' onmouseover='showdeed(" + p.position + ");' onmouseout='hidedeed();' class='statscellcolor'>" + s.name + "</a>.<input type='button' class='button' onclick='buy();' value='Buy ($" + s.price + ")' title='Buy " + s.name + " for " + s.pricetext + ".'/></div>";
 		}
 
 	}
@@ -2207,15 +2209,15 @@ function land(increasedRent) {
 		citytax();
 	}
 
-	// Go to jail. Go directly to Jail. Do not pass GO. Do not collect $200.
+	// Go to the Backrooms. Go directly to the Backrooms. Do not pass GO. Do not collect $200.
 	if (p.position === 30) {
 		updateMoney();
 		updatePosition();
 
 		if (p.human) {
-			popup("<div>Go to jail. Go directly to Jail. Do not pass GO. Do not collect $200.</div>", gotojail);
+			popup("<div>Go to the Backrooms. Go directly to the Backrooms. Do not pass GO. Do not collect $200.</div>", gotobackrooms);
 		} else {
-			gotojail();
+			gotobackrooms();
 		}
 
 		return;
@@ -2271,7 +2273,7 @@ function roll() {
 			document.getElementById("nextbutton").value = "Roll again";
 			document.getElementById("nextbutton").title = "You threw doubles. Roll again.";
 
-		// If player rolls doubles three times in a row, send him to jail
+		// If player rolls doubles three times in a row, send him to the Backrooms
 		} else if (doublecount === 3) {
 			p.jail = true;
 			doublecount = 0;
@@ -2280,9 +2282,9 @@ function roll() {
 
 
 			if (p.human) {
-				popup("You rolled doubles three times in a row. Go to jail.", gotojail);
+				popup("You rolled doubles three times in a row. Go to the Backrooms.", gotobackrooms);
 			} else {
-				gotojail();
+				gotobackrooms();
 			}
 
 			return;
@@ -2311,7 +2313,7 @@ function roll() {
 			p.position = 10 + die1 + die2;
 			doublecount = 0;
 
-			addAlert(p.name + " rolled doubles to get out of jail.");
+			addAlert(p.name + " rolled doubles to Get Out of the Backrooms.");
 
 			land();
 		} else {
@@ -2330,7 +2332,7 @@ function roll() {
 				}
 			} else {
 				$("#landed").show();
-				document.getElementById("landed").innerHTML = "You are in jail.";
+				document.getElementById("landed").innerHTML = "You are in the Backrooms.";
 
 				if (!p.human) {
 					popup(p.AI.alertList, game.next);
@@ -2358,23 +2360,25 @@ function roll() {
 }
 
 function play() {
-	if (turns > maxTurns){
+	if (turns >= maxTurns){ 
 		var mostMoney = 0;
-		var winner = null;
-		for(let i = 0; i < pcount; i++){
-			if(player[i].money > mostMoney){
-				mostMoney = player[i].money;
+		var winner = 0;
+		for(let i = 1; i <= pcount; i++){
+			var money = document.getElementById("p" + i.toString() + "money").textContent;
+			if(money > mostMoney){  
+				mostMoney = money;
 				winner = i;
 			}
 		}
-		winnerName = player[winner].name;
+		var winName =  document.getElementById("p" + winner.toString() + "moneyname").textContent;
 		$("*").hide();
-		alert(winnerName + " has won the game. \nRefresh to play another.");
+		alert(winName + " has won the game. \nRefresh to play another.");
 	}
 
 
 	turn++;
-	turns++
+	turns++;
+	document.getElementById("turnTimer").innerHTML = "Turn " + turns + " of " + maxTurns;
 	if (turn > pcount) {
 		turn -= pcount;
 	}
@@ -2404,21 +2408,21 @@ function play() {
 
 	if (p.jail) {
 		$("#landed").show();
-		document.getElementById("landed").innerHTML = "You are in jail.<input type='button' title='Pay $50 fine to get out of jail immediately.' value='Pay $50 fine' onclick='payfifty();' />";
+		document.getElementById("landed").innerHTML = "You are in the Backrooms.<input type='button' title='Pay $50 fine to Get Out of the Backrooms immediately.' value='Pay $50 fine' onclick='payfifty();' />";
 
 		if (p.communityChestJailCard || p.chanceJailCard) {
-			document.getElementById("landed").innerHTML += "<input type='button' id='gojfbutton' title='Use &quot;Get Out of Jail Free&quot; card.' onclick='useJailCard();' value='Use Card' />";
+			document.getElementById("landed").innerHTML += "<input type='button' id='gojfbutton' title='Use &quot;Get Out of the Backrooms Free&quot; card.' onclick='useJailCard();' value='Use Card' />";
 		}
 
-		document.getElementById("nextbutton").title = "Roll the dice. If you throw doubles, you will get out of jail.";
+		document.getElementById("nextbutton").title = "Roll the dice. If you throw doubles, you will Get Out of the Backrooms.";
 
 		if (p.jailroll === 0)
-			addAlert("This is " + p.name + "'s first turn in jail.");
+			addAlert("This is " + p.name + "'s first turn in the Backrooms.");
 		else if (p.jailroll === 1)
-			addAlert("This is " + p.name + "'s second turn in jail.");
+			addAlert("This is " + p.name + "'s second turn in the Backrooms.");
 		else if (p.jailroll === 2) {
 			document.getElementById("landed").innerHTML += "<div>NOTE: If you do not throw doubles after this roll, you <i>must</i> pay the $50 fine.</div>";
-			addAlert("This is " + p.name + "'s third turn in jail.");
+			addAlert("This is " + p.name + "'s third turn in the Backrooms.");
 		}
 
 		if (!p.human && p.AI.postBail()) {
@@ -2431,6 +2435,13 @@ function play() {
 	}
 
 	updateMoney();
+	//var money = document.getElementById("p" + turn.toString() + "money").textContent;
+	//var moneyName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
+	//alert("money: " + money + " Max money: " + maxMoney);
+	//if(money >= maxMoney){
+	//	$("*").hide();
+	//	alert(moneyName + " has won the game by exceeding the maximum wealth. \nRefresh to play another.");
+	//}
 	updatePosition();
 	updateOwned();
 
@@ -2451,6 +2462,8 @@ function setup() {
 	var p;
 
 	maxTurns = document.getElementById("maxTurns").value;
+	maxTurns = maxTurns * pcount;
+	maxMoney = document.getElementById("maxMoney").value;
 	turns = 0;
 
 	playerArray.randomize();
@@ -2470,7 +2483,7 @@ function setup() {
 		}
 	}
 
-	$("#board, #moneybar", "#wheelCanvas").show();
+	$("#board, #moneybar, #wheelCanvas, #logo").show();
 	$("#setup").hide();
 
 	if (pcount === 2) {
@@ -2619,6 +2632,7 @@ window.onload = function() {
 
 	var currentCell;
 	var currentCellAnchor;
+	var currentColorStrip;
 	var currentCellPositionHolder;
 	var currentCellName;
 	var currentCellOwner;
@@ -2636,6 +2650,15 @@ window.onload = function() {
 		currentCellPositionHolder.id = "cell" + i + "positionholder";
 		currentCellPositionHolder.className = "cell-position-holder";
 		currentCellPositionHolder.enlargeId = "enlarge" + i;
+
+		// All the colr strips set here:
+		currentColorStrip = currentCell.appendChild(document.createElement("div"));
+		currentColorStrip.id = "ColorStrip" + i + "";
+		currentColorStrip.className = "color-strip";
+		document.getElementById("ColorStrip" + i + "").style.backgroundColor = s.color;
+		document.getElementById("ColorStrip" + i + "").style.width = "100%";
+		document.getElementById("ColorStrip" + i + "").style.height = "10px";
+
 
 		currentCellName = currentCellAnchor.appendChild(document.createElement("div"));
 		currentCellName.id = "cell" + i + "name";
@@ -2657,19 +2680,18 @@ window.onload = function() {
 	// Add images to enlarges.
 	document.getElementById("enlarge0token").innerHTML += '<img src="' + IMAGE_URL + 'arrow_icon.png" height="40" width="136" alt="" />';
 	document.getElementById("enlarge20price").innerHTML += "<img src='" + IMAGE_URL + "free_parking_icon.png' height='80' width='72' alt='' style='position: relative; top: -20px;' />";
-	document.getElementById("enlarge38token").innerHTML += '<img src="' + IMAGE_URL + 'tax_icon.png" height="60" width="70" alt="" style="position: relative; top: -20px;" />';
 
 	corrections();
 
 	// Jail corrections
 	$("<div>", {id: "jailpositionholder" }).appendTo("#jail");
-	$("<span>").text("Jail").appendTo("#jail");
+	$("<span>").text("the Backrooms").appendTo("#jail");
 
 	document.getElementById("jail").enlargeId = "enlarge40";
 
-	document.getElementById("enlarge-wrap").innerHTML += "<div id='enlarge40' class='enlarge'><div id='enlarge40color' class='enlarge-color'></div><br /><div id='enlarge40name' class='enlarge-name'>Jail</div><br /><div id='enlarge40price' class='enlarge-price'><img src='" + IMAGE_URL + "jake_icon.png' height='80' width='80' alt='' style='position: relative; top: -20px;' /></div><br /><div id='enlarge40token' class='enlarge-token'></div></div>";
+	document.getElementById("enlarge-wrap").innerHTML += "<div id='enlarge40' class='enlarge'><div id='enlarge40color' class='enlarge-color'></div><br /><div id='enlarge40name' class='enlarge-name'>Backrooms</div><br /><div id='enlarge40price' class='enlarge-price'><img src='" + IMAGE_URL + "jake_icon.png' height='80' width='80' alt='' style='position: relative; top: -20px;' /></div><br /><div id='enlarge40token' class='enlarge-token'></div></div>";
 
-	document.getElementById("enlarge40name").innerHTML = "Jail";
+	document.getElementById("enlarge40name").innerHTML = "Backrooms";
 
 	// Create event handlers for hovering and draging.
 
