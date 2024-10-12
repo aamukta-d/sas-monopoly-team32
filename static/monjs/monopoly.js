@@ -29,6 +29,32 @@ function Game() {
 	};
 
 	this.next = function() {
+		var returnVal = document.getElementById("returnValMain").textContent;
+		if (returnVal == 3){
+			p.money += 500;
+			for (var i = 1; i <= 4; i++) {
+				p_i = player[i];
+		
+				$("#moneybarrow" + i).show();
+				document.getElementById("p" + i + "moneybar").style.border = "2px solid " + p_i.color;
+				document.getElementById("p" + i + "money").innerHTML = p_i.money;
+				document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
+			}
+		}
+		else if (returnVal > 100){
+			p.money += parseInt(returnVal, 10);
+			for (var i = 1; i <= 4; i++) {
+				p_i = player[i];
+		
+				$("#moneybarrow" + i).show();
+				document.getElementById("p" + i + "moneybar").style.border = "2px solid " + p_i.color;
+				document.getElementById("p" + i + "money").innerHTML = p_i.money;
+				document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
+			}
+		}
+
+		document.getElementById("returnValMain").textContent = 0;
+
 		if (!p.human && p.money < 0) {
 			p.AI.payDebt();
 
