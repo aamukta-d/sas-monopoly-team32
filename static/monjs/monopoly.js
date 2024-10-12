@@ -12,7 +12,7 @@ function Game() {
 		$("#board").show();
 		$("#moneybarwrap").show();
 		$("#control").show();
-		$("#wheelDiv").show();
+		$("#wheelDiv").hide();
 		$("#subway-surfers-wrapper").show();
 		$("#trade").hide();
 	}
@@ -2128,7 +2128,8 @@ function land(increasedRent) {
 				buy();
 			}
 		} else {
-			document.getElementById("landed").innerHTML = "<div>You landed on <a href='javascript:void(0);' onmouseover='showdeed(" + p.position + ");' onmouseout='hidedeed();' class='statscellcolor'>" + s.name + "</a>.<input type='button' onclick='buy();' value='Buy ($" + s.price + ")' title='Buy " + s.name + " for " + s.pricetext + ".'/></div>";
+			//added button styling below
+			document.getElementById("landed").innerHTML = "<div>You landed on <a href='javascript:void(0);' onmouseover='showdeed(" + p.position + ");' onmouseout='hidedeed();' class='statscellcolor'>" + s.name + "</a>.<input type='button' class='button' onclick='buy();' value='Buy ($" + s.price + ")' title='Buy " + s.name + " for " + s.pricetext + ".'/></div>";
 		}
 
 	}
@@ -2481,7 +2482,7 @@ function setup() {
 		}
 	}
 
-	$("#board, #moneybar", "#wheelCanvas").show();
+	$("#board, #moneybar, #wheelCanvas, #logo").show();
 	$("#setup").hide();
 
 	if (pcount === 2) {
@@ -2630,6 +2631,7 @@ window.onload = function() {
 
 	var currentCell;
 	var currentCellAnchor;
+	var currentColorStrip;
 	var currentCellPositionHolder;
 	var currentCellName;
 	var currentCellOwner;
@@ -2647,6 +2649,15 @@ window.onload = function() {
 		currentCellPositionHolder.id = "cell" + i + "positionholder";
 		currentCellPositionHolder.className = "cell-position-holder";
 		currentCellPositionHolder.enlargeId = "enlarge" + i;
+
+		// All the colr strips set here:
+		currentColorStrip = currentCell.appendChild(document.createElement("div"));
+		currentColorStrip.id = "ColorStrip" + i + "";
+		currentColorStrip.className = "color-strip";
+		document.getElementById("ColorStrip" + i + "").style.backgroundColor = s.color;
+		document.getElementById("ColorStrip" + i + "").style.width = "100%";
+		document.getElementById("ColorStrip" + i + "").style.height = "10px";
+
 
 		currentCellName = currentCellAnchor.appendChild(document.createElement("div"));
 		currentCellName.id = "cell" + i + "name";

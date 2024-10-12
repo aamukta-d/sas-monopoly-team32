@@ -618,6 +618,21 @@ td {
 	height: 72px;
 }
 
+.button {
+	background-color: #ac1a1a;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 0.75rem;
+	min-width: 100px;
+	min-height: 30px;
+  }
+
+.button:hover {
+	background-color: #cc782a;
+}
+
 .enlarge {
 	width: 150px;
 	height: 200px;
@@ -843,4 +858,23 @@ video {
 	flex-grow: 1; /* Allow the video container to grow */
 	position: relative; /* For absolute positioning of the video */
 	padding: 20px; /* Padding around the video */
+}
+
+#logo {
+	display:none;
+	max-width: 25%; /* Responsive image */
+	width:800px;
+	height: 600px;
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Optional: Space from the left */
+	padding-top: 750px;
+	padding-right: 350px;
+
+	position: absolute; /* Use absolute positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center the image */
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 2; /* Ensure the image is on top */
 }
