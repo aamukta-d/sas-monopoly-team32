@@ -2433,6 +2433,12 @@ function play() {
 	}
 
 	updateMoney();
+	var money = document.getElementById("p" + turn.toString() + "money").textContent;
+	var moneyName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
+	if(money >= maxMoney){
+		$("*").hide();
+		alert(moneyName + " has won the game. \nRefresh to play another.");
+	}
 	updatePosition();
 	updateOwned();
 
