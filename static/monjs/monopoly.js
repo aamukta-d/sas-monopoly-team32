@@ -2483,7 +2483,7 @@ function setup() {
 		}
 	}
 
-	$("#board, #moneybar, #wheelCanvas, #logo").show();
+	$("#board, #moneybar, #wheelCanvas, #logo, #subway-surfers-wrapper").show();
 	$("#setup").hide();
 
 	if (pcount === 2) {
