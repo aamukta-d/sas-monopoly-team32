@@ -1,5 +1,5 @@
 body {
-	background: #d4e8d3;
+	background: #6C584C;
 	margin: 0px;
 	min-width: 1075px;
 }
@@ -64,6 +64,7 @@ td {
 }
 
 #board {
+	background: #d4e8d3;
 	display: none;
 	border: 2px solid black;
 	border-spacing: 3px;
