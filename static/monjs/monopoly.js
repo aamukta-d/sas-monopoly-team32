@@ -1002,6 +1002,7 @@ var pcount;
 var turn = 0, doublecount = 0;
 var turns = 0;
 var maxTurns = 20;
+var maxMoney = 20000;
 // Overwrite an array with numbers from one to the array's length in a random order.
 Array.prototype.randomize = function(length) {
 	length = (length || this.length);
@@ -2357,23 +2358,25 @@ function roll() {
 }
 
 function play() {
-	if (turns > maxTurns){
+	if (turns >= maxTurns){ 
 		var mostMoney = 0;
-		var winner = null;
-		for(let i = 0; i < pcount; i++){
-			if(player[i].money > mostMoney){
-				mostMoney = player[i].money;
+		var winner = 0;
+		for(let i = 1; i <= pcount; i++){
+			var money = document.getElementById("p" + i.toString() + "money").textContent;
+			if(money > mostMoney){  //p.money returns 1500 no matter what 
+				mostMoney = money;
 				winner = i;
 			}
 		}
-		winnerName = player[winner].name;
+		var winName =  document.getElementById("p" + winner.toString() + "moneyname").textContent;
 		$("*").hide();
-		alert(winnerName + " has won the game. \nRefresh to play another.");
+		alert(winName + " has won the game. \nRefresh to play another.");
 	}
 
 
 	turn++;
-	turns++
+	turns++;
+	document.getElementById("turnTimer").innerHTML = "Turn " + turns + " of " + maxTurns;
 	if (turn > pcount) {
 		turn -= pcount;
 	}
@@ -2430,6 +2433,13 @@ function play() {
 	}
 
 	updateMoney();
+	var money = document.getElementById("p" + turn.toString() + "money").textContent;
+	var moneyName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
+	if(money >= maxMoney){
+		var winName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
+		$("*").hide();
+		alert(winName + " has won the game. \nRefresh to play another.");
+	}
 	updatePosition();
 	updateOwned();
 
@@ -2450,6 +2460,8 @@ function setup() {
 	var p;
 
 	maxTurns = document.getElementById("maxTurns").value;
+	maxTurns = maxTurns * pcount;
+	maxMoney = document.getElementById("maxMoney").value;
 	turns = 0;
 
 	playerArray.randomize();

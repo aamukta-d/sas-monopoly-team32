@@ -207,6 +207,7 @@
 
 	<div id="moneybarwrap">
 		<div id="moneybar">
+			<text id = "turnTimer"></text>
 			<table>
 				<tr id="moneybarrow1" class="money-bar-row">
 					<td class="moneybararrowcell"><img src="{{ url_for('static', filename='images/arrow.png') }}" id="p1arrow" class="money-bar-arrow" alt=">"/></td>
@@ -381,6 +382,7 @@
 	
 		<div id="turnLimit">
 			Turn Limit: <input type="number" id="maxTurns" title="maxTurns" max="100" min="1" value="20"/>
+			Money Limit: <input type="number" id="maxMoney" title="maxMoney" max = "1000000" min = "2000" value = "10000"/>
 		</div>
 
 		<div style="margin: 20px 0px;">

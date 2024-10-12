@@ -1,5 +1,5 @@
 body {
-	background: #FFFFFF;
+	background: #d4e8d3;
 	margin: 0px;
 	min-width: 1075px;
 }
@@ -762,6 +762,7 @@ td {
 	height: 100%;
 	z-index: 1;
 	position: relative;
+	border: 1px solid black;
 }
 
 .cell-position {
