@@ -432,6 +432,8 @@ function showGameOver() {
   const x = canvas.width / 4.5;
   const y = canvas.height / 2;
   ctx.fillText(("Game over: you have won " + Math.round(score.score) + " dollars!"), x, y);
+  window.opener.document.getElementById("returnValMain").textContent = Math.round(score.score);
+  setTimeout(window.close, 4000);
 }
 
 function setupGameReset() {

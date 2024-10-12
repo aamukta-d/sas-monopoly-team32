@@ -198,6 +198,8 @@ function openDinoRunPopup(){
 		<script src="static/monjs/dr_game_index.js"></script>
 		</html>
 	  `);
+	popupWindow.document.close();
+	alert("Score was " + document.getElementById("#returnValMain").TEXT_NODE);
 }
 
 function flappyPopUp() {
@@ -218,7 +220,9 @@ function flappyPopUp() {
 	  <canvas id="canvas" width="300" height="500"></canvas>
 	</body>
 	<script src="static/monjs/fb_game.js"></script>
+	<text id="returnVal" ></text>
 	</html>
   `);
 	popupWindow.document.close();
+	alert("Score was " + document.getElementById("#returnValMain").TEXT_NODE);
 }

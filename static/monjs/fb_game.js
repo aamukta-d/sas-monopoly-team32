@@ -294,6 +294,9 @@ const UI = {
           this.y + this.gameOver.sprite.height - this.tap[0].sprite.height;
         sctx.drawImage(this.gameOver.sprite, this.x, this.y);
         sctx.drawImage(this.tap[this.frame].sprite, this.tx, this.ty);
+        document.getElementById("returnVal").textContent = this.score.curr;
+        window.opener.document.getElementById("returnValMain").textContent = this.score.curr;
+        setTimeout(window.close, 4000);
         break;
       case state.win:
         this.y = parseFloat(scrn.height - this.win.sprite.height)/3;
@@ -303,6 +306,8 @@ const UI = {
           (this.y + this.win.sprite.height - this.tap[0].sprite.height)*1.75;
         sctx.drawImage(this.win.sprite, this.x, this.y);
         sctx.drawImage(this.tap[this.frame].sprite, this.tx, this.ty);
+        window.opener.document.getElementById("returnValMain").textContent = this.score.curr;
+        setTimeout(window.close, 4000);
         break;
     }
     this.drawScore();

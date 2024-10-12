@@ -1191,7 +1191,7 @@ function updateMoney() {
 	document.getElementById("pmoney").innerHTML = "$" + p.money;
 	$(".money-bar-row").hide();
 
-	for (var i = 1; i <= pcount; i++) {
+	for (var i = 1; i <= 4; i++) {
 		p_i = player[i];
 
 		$("#moneybarrow" + i).show();
