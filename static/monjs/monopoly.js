@@ -1002,6 +1002,7 @@ var pcount;
 var turn = 0, doublecount = 0;
 var turns = 0;
 var maxTurns = 20;
+var maxMoney = 20000;
 // Overwrite an array with numbers from one to the array's length in a random order.
 Array.prototype.randomize = function(length) {
 	length = (length || this.length);
@@ -2432,6 +2433,14 @@ function play() {
 	}
 
 	updateMoney();
+	var money = document.getElementById("p" + turn.toString() + "money").textContent;
+	var moneyName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
+	alert("money = " + money + " Max money = " + maxMoney + " " + moneyName);
+	if(money >= maxMoney){
+		var winName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
+		$("*").hide();
+		alert(winName + " has won the game. \nRefresh to play another.");
+	}
 	updatePosition();
 	updateOwned();
 
@@ -2453,6 +2462,7 @@ function setup() {
 
 	maxTurns = document.getElementById("maxTurns").value;
 	maxTurns = maxTurns * pcount;
+	maxMoney = document.getElementById("maxMoney").value;
 	turns = 0;
 
 	playerArray.randomize();
