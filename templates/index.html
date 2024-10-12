@@ -269,7 +269,7 @@
 				<tr id="moneybarrowbutton">
 					<td class="moneybararrowcell">&nbsp;</td>
 					<td style="border: none;">
-						<input type="button" id="viewstats" value="View stats" title="View a pop-up window that shows a list of each player's properties." />
+						<input type="button" class="button" id="viewstats" value="View stats" title="View a pop-up window that shows a list of each player's properties." />
 					</td>
 				</tr>
 			</table>
@@ -387,7 +387,7 @@
 		</div>
 
 		<div style="margin: 20px 0px;">
-			<input type="button" value="Start Game" onclick="setup();" title="Begin playing." />
+			<input type="button" class="button" value="Start Game" onclick="setup();" title="Begin playing." />
 		</div>
 	
 		<div id="noF5">Note: Refreshing this page or navigating away from it may end your game without warning.</div>   
@@ -424,9 +424,9 @@
 					<div id="manage">
 						<div id="option">
 							<div id="buildings" title="Available buildings"></div>
-							<input type="button" value="Buy house" id="buyhousebutton"/>
-							<input type="button" value="Mortgage" id="mortgagebutton" />
-							<input type="button" value="Sell house" id="sellhousebutton"/>
+							<input type="button" class="button" value="Buy house" id="buyhousebutton"/>
+							<input type="button" class="button" value="Mortgage" id="mortgagebutton" />
+							<input type="button" class="button" value="Sell house" id="sellhousebutton"/>
 						</div>
 						<div id="owned"></div>
 					</div>
@@ -445,8 +445,8 @@
 			</tr><tr>
 				<td colspan="2" style="border: none">
 					<div style="padding-top: 8px;">
-						<input type="button" id="nextbutton" title="Roll the dice and move your token accordingly." value="Roll Dice"/>
-						<input type="button" id="resignbutton" title="If you cannot pay your debt then you must resign from the game." value="Resign" onclick="game.resign();" />
+						<input type="button" class="button" id="nextbutton" title="Roll the dice and move your token accordingly." value="Roll Dice"/>
+						<input type="button" class="button" id="resignbutton" title="If you cannot pay your debt then you must resign from the game." value="Resign" onclick="game.resign();" />
 					</div>
 				</td>
 			</tr>
@@ -458,7 +458,7 @@
 
 
 	<div id="trade">
-		<input type="button" id="goBackButton" value="<< Back to Monopoly game" 
+		<input type="button" class="button" id="goBackButton" value="<< Back to Monopoly game" 
 		onclick="game.backToGame();"/>
 		<table style="border-spacing: 3px;">
 			<tr>
@@ -483,14 +483,13 @@
 			</tr>
 			<tr>
 				<td colspan="2" class="trade-cell">
-					<input type="button" id="proposetradebutton" value="Propose Trade" onclick="game.proposeTrade();" title="Exchange the money and properties that are checked above." />
-					<input type="button" id="canceltradebutton" value="Cancel Trade" onclick='game.cancelTrade();' title="Cancel the trade." />
-					<input type="button" id="accepttradebutton" value="Accept Trade" onclick="game.acceptTrade();" title="Accept the proposed trade." />
-					<input type="button" id="rejecttradebutton" value="Reject Trade" onclick='game.cancelTrade();' title="Reject the proposed trade." />
+					<input type="button" class="button" id="proposetradebutton" value="Propose Trade" onclick="game.proposeTrade();" title="Exchange the money and properties that are checked above." />
+					<input type="button" class="button" id="canceltradebutton" value="Cancel Trade" onclick='game.cancelTrade();' title="Cancel the trade." />
+					<input type="button" class="button" id="accepttradebutton" value="Accept Trade" onclick="game.acceptTrade();" title="Accept the proposed trade." />
+					<input type="button" class="button" id="rejecttradebutton" value="Reject Trade" onclick='game.cancelTrade();' title="Reject the proposed trade." />
 				</td>
 			</tr>
 		</table>
 	</div>
-
 </body>
 </html>
