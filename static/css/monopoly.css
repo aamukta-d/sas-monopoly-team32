@@ -519,6 +519,10 @@ td {
 	z-index: 0;
 }
 
+#wheelCanvas {
+	display: none;
+}
+
 .menu-item:hover {
 	/* background-image: -webkit-linear-gradient(bottom,#000080,#4787ED);
 	background-image: -moz-linear-gradient(bottom,#000080,#4787ED); */

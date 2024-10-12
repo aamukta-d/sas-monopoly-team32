@@ -895,6 +895,23 @@ function Game() {
 		}
 	};
 
+	this.spinWheel = function() {
+		var itemsToShow = parseInt(4 + Math.random()*10);
+		console.log(itemsToShow);
+		var items = {};
+		for(var i=0; i < itemsToShow; i++){
+			items[i] = 'ITEM ' + (i+1);
+		}
+	  $('#wheelCanvas').rouletteWheel({
+		items : items,
+		selected : function(key, value){
+		  alert('SELECTED : ' + key + ' => ' + value);
+		},
+		spinText : 'Click Me',
+	  });
+
+	}
+
 }
 
 var game;
@@ -2219,6 +2236,7 @@ function roll() {
 	document.getElementById("nextbutton").title = "End turn and advance to the next player.";
 
 	game.rollDice();
+	game.spinWheel();
 	var die1 = game.getDie(1);
 	var die2 = game.getDie(2);
 
@@ -2419,7 +2437,7 @@ function setup() {
 		}
 	}
 
-	$("#board, #moneybar").show();
+	$("#board, #moneybar", "#wheelCanvas").show();
 	$("#setup").hide();
 
 	if (pcount === 2) {
