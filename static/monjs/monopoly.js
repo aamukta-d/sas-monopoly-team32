@@ -2357,7 +2357,7 @@ function roll() {
 }
 
 function play() {
-	if (turns > MaxTurns){
+	if (turns > maxTurns){
 		var mostMoney = 0;
 		var winner = null;
 		for(let i = 0; i < pcount; i++){
@@ -2367,7 +2367,8 @@ function play() {
 			}
 		}
 		winnerName = player[winner].name;
-		alert(winnerName + " has won the game!!!");
+		$("*").hide();
+		alert(winnerName + " has won the game. \nRefresh to play another.");
 	}
 
 
@@ -2448,7 +2449,7 @@ function setup() {
 	var playerArray = new Array(pcount);
 	var p;
 
-	MaxTurns = document.getElementById("maxTurns").value;
+	maxTurns = document.getElementById("maxTurns").value;
 	turns = 0;
 
 	playerArray.randomize();
