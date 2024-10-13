@@ -30,6 +30,7 @@ function Game() {
 
 	this.next = function() {
 		var returnVal = document.getElementById("returnValMain").textContent;
+		var winnerName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
 		if (returnVal == 3){
 			p.money += 500;
 			for (var i = 1; i <= 4; i++) {
@@ -40,6 +41,7 @@ function Game() {
 				document.getElementById("p" + i + "money").innerHTML = p_i.money;
 				document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
 			}
+			addAlert("Well done player " + winnerName + " you won $500");
 		}
 		else if (returnVal > 100){
 			p.money += parseInt(returnVal, 10);
@@ -51,8 +53,8 @@ function Game() {
 				document.getElementById("p" + i + "money").innerHTML = p_i.money;
 				document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
 			}
+			addAlert("Well done player " + winnerName + " you won $" + returnVal);
 		}
-
 		document.getElementById("returnValMain").textContent = 0;
 
 		var money = document.getElementById("p" + turn.toString() + "money").textContent; ////////////////
