@@ -46,12 +46,20 @@ function corrections() {
 	document.getElementById("enlarge4token").innerHTML += '<img src="' + IMAGE_URL + 'fanum.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
 	document.getElementById("enlarge5token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
 	document.getElementById("enlarge6token").innerHTML += '<img src="' + IMAGE_URL + 'sus.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge7token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	// Chance cards
+	document.getElementById("enlarge7token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="50" alt="" style="position: relative; bottom: 5px;" />';
+	document.getElementById("enlarge22token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="50" alt="" style="position: relative; bottom: 5px;" />';
+	document.getElementById("enlarge36token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="50" alt="" style="position: relative; bottom: 5px;" />';
+
 	document.getElementById("enlarge8token").innerHTML += '<img src="' + IMAGE_URL + 'sigma.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
 	document.getElementById("enlarge9token").innerHTML += '<img src="' + IMAGE_URL + 'alpha.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+
+	// Station cards
 	document.getElementById("enlarge15token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
 	document.getElementById("enlarge25token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
 	document.getElementById("enlarge35token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+
+	//Party cards
 	document.getElementById("enlarge12token").innerHTML += '<img src="' + IMAGE_URL + 'electric_icon.png" height="60" width="48" alt="" style="position: relative; top: -20px;" />';
 	document.getElementById("enlarge28token").innerHTML += '<img src="' + IMAGE_URL + 'water_icon.png" height="60" width="78" alt="" style="position: relative; top: -20px;" />';
 }
@@ -61,26 +69,26 @@ function utiltext() {
 }
 
 function transtext() {
-	return '<div style="font-size: 14px; line-height: 1.5;">Rent<span style="float: right;">$25.</span><br />If 2 Railroads are owned<span style="float: right;">50.</span><br />If 3 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">100.</span><br />If 4 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">200.</span></div>';
+	return '<div style="font-size: 14px; line-height: 1.5;">Rent<span style="float: right;">$25.</span><br />If 2 Stations are owned<span style="float: right;">$50.</span><br />If 3 Stations are owned<span style="float: right;">$100.</span><br />If 4 Stations are owned<span style="float: right;">$200.</span></div>';
 }
 
-function luxurytax() {
-	addAlert(player[turn].name + " paid $100 for landing on Luxury Tax.");
+function antiFanumTax() {
+	addAlert(player[turn].name + " paid $100 for landing on Anti Fanum Tax.");
 	player[turn].pay(100, 0);
 
-	$("#landed").show().text("You landed on Luxury Tax. Pay $100.");
+	$("#landed").show().text("You landed on Anti Fanum Tax. Pay $100.");
 }
 
-function citytax() {
-	addAlert(player[turn].name + " paid $200 for landing on City Tax.");
+function fanumTax() {
+	addAlert(player[turn].name + " paid $200 for landing on Fanum Tax.");
 	player[turn].pay(200, 0);
 
-	$("#landed").show().text("You landed on City Tax. Pay $200.");
+	$("#landed").show().text("You landed on Fanum Tax. Pay $200.");
 }
 
 var square = [];
 
-square[0] = new Square("EDGE", "COLLECT $200 SALARY AS YOU PASS.", "#FFFFFF");
+square[0] = new Square("GO", "COLLECT $200 SALARY AS YOU PASS.", "#FFFFFF");
 square[1] = new Square("Rizz Lane", "$60", "#8B4513", 60, 3, 2, 10, 30, 90, 160, 250);
 square[2] = new Square("MINIGAME", "WIN A PRIZE", "#FFFFFF");
 square[3] = new Square("Ohio", "$60", "#8B4513", 60, 3, 4, 20, 60, 180, 320, 450);
@@ -102,7 +110,7 @@ square[18] = new Square("Chicken Nugget Avenue", "$180", "#FFA500", 180, 6, 14, 
 square[19] = new Square("GigaChad Avenue", "$200", "#FFA500", 200, 6, 16, 80, 220, 600, 800, 1000);
 square[20] = new Square("Free Parking", "", "#FFFFFF");
 square[21] = new Square("Skibidi Street", "$220", "#FF0000", 220, 7, 18, 90, 250, 700, 875, 1050);
-square[22] = new Square("Chance", "FOLLOW INSTRUCTIONS ON TOP CARD", "#FFFFFF");
+square[22] = new Square("Chance", "FOLLOW INSTRUCTIONS", "#FFFFFF");
 square[23] = new Square("Sin City", "$220", "#FF0000", 220, 7, 18, 90, 250, 700, 875, 1050);
 square[24] = new Square("FNAF Avenue", "$240", "#FF0000", 240, 7, 20, 100, 300, 750, 925, 1100);
 square[25] = new Square("Mewing Station", "$200", "#FFFFFF", 200, 1);
@@ -110,13 +118,13 @@ square[26] = new Square("GYAT Avenue", "$260", "#FFFF00", 260, 8, 22, 110, 330, 
 square[27] = new Square("Demure Avenue", "$260", "#FFFF00", 260, 8, 22, 110, 330, 800, 975, 1150);
 square[28] = new Square("Tiktok Rizz Party", "$150", "#FFFFFF", 150, 2);
 square[29] = new Square("Brat Gardens", "$280", "#FFFF00", 280, 8, 24, 120, 360, 850, 1025, 1200);
-square[30] = new Square("Go to the Backrooms", "You have been sent to the Backrooms. What an L.Do not collect $200.", "#FFFFFF");
+square[30] = new Square("Go to the Backrooms", "You have been sent to the Backrooms. What an L. Do not collect $200.", "#FFFFFF");
 square[31] = new Square("Cap Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
 square[32] = new Square("Aura Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
 square[33] = new Square("MINIGAME", "PLAY THE MINIGAME TO WIN A PRIZE", "#FFFFFF");
 square[34] = new Square("Yapping Avenue", "$320", "#008000", 320, 9, 28, 150, 450, 1000, 1200, 1400);
 square[35] = new Square("Zesty Station", "$200", "#FFFFFF", 200, 1);
-square[36] = new Square("Chance", "FOLLOW INSTRUCTIONS ON TOP CARD", "#FFFFFF");
+square[36] = new Square("Chance", "FOLLOW INSTRUCTIONS", "#FFFFFF");
 square[37] = new Square("John Pork Place", "$350", "#0000FF", 350, 10, 35, 175, 500, 1100, 1300, 1500);
 square[38] = new Square("Anti Fanum Tax", "Pay $100", "#FFFFFF");
 square[39] = new Square("Tilted Towers", "$400", "#0000FF", 400, 10, 50, 200, 600, 1400, 1700, 2000);
@@ -157,4 +165,4 @@ chanceCards[11] = new Card("ADVANCE to FNAF Avenue. If you pass \"GO\" collect $
 chanceCards[12] = new Card("Your podcast is popping off. Collect $150.", function() { addamount(150, 'Chance');});
 chanceCards[13] = new Card("H-O-T-T-O-G-O you must now ADVANCE TO GO!", function() {advance(0)});
 chanceCards[14] = new Card("Time to go home! ADVANCE to Beta Avenue. If you pass \"GO\" collect $200.", function() { advance(11);});
-chanceCards[15] = new Card("Go to the Backrooms. Go Directly to the Backrooms. Do not pass \"GO\". Do not collect $200.", function() { gotobackrooms();});
+chanceCards[15] = new Card("Go to the Backrooms. Go directly to the Backrooms. Do not pass \"GO\". Do not collect $200.", function() { gotobackrooms();});

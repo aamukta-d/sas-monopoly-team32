@@ -2203,9 +2203,9 @@ function land(increasedRent) {
 		document.getElementById("landed").innerHTML = "You landed on " + s.name + ". Property is mortgaged; no rent was collected.";
 	}
 
-	// City Tax
+	// Fanum Tax
 	if (p.position === 4) {
-		citytax();
+		fanumTax();
 	}
 
 	// Go to the Backrooms. Go directly to the Backrooms. Do not pass GO. Do not collect $200.
@@ -2222,9 +2222,9 @@ function land(increasedRent) {
 		return;
 	}
 
-	// Luxury Tax
+	// Anti Fanum Tax
 	if (p.position === 38) {
-		luxurytax();
+		antiFanumTax();
 	}
 
 	updateMoney();
@@ -2685,7 +2685,7 @@ window.onload = function() {
 
 	// Jail corrections
 	$("<div>", {id: "jailpositionholder" }).appendTo("#jail");
-	$("<span>").text("the Backrooms").appendTo("#jail");
+	$("<span>").text("The Backrooms").appendTo("#jail");
 
 	document.getElementById("jail").enlargeId = "enlarge40";
 
