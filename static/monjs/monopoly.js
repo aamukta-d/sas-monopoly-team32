@@ -41,7 +41,7 @@ function Game() {
 				document.getElementById("p" + i + "money").innerHTML = p_i.money;
 				document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
 			}
-			addAlert("Well done player " + winnerName + " you won $500");
+			addAlert("Well done " + winnerName + " you won $500");
 		}
 		else if (returnVal > 100){
 			p.money += parseInt(returnVal, 10);
