@@ -76,8 +76,8 @@ td {
 	margin: 15px;
 }
 
-#returnVale {
-	margin: 15px;
+#returnValMain {
+	display: none;
 }
 
 #noF5 {
