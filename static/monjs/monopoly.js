@@ -1576,10 +1576,12 @@ function chanceCommunityChest() {
 		// 	communityChestCards.deck.splice(communityChestCards.index, 1);
 		// }
 
-		popup("<img src='" + IMAGE_URL + "community_chest_icon.png' style='height: 50px; width: 53px; float: left; margin: 8px 8px 8px 0px;' /><div style='font-weight: bold; font-size: 16px; '>Community Chest:</div><div style='text-align: justify;'>" + communityChestCards[communityChestIndex].text + "</div>", function() {
-			communityChestAction(communityChestIndex);
-		});
-
+		if (p.human == true){
+			popup("<img src='" + IMAGE_URL + "community_chest_icon.png' style='height: 50px; width: 53px; float: left; margin: 8px 8px 8px 0px;' /><div style='font-weight: bold; font-size: 16px; '>Community Chest:</div><div style='text-align: justify;'>" + communityChestCards[communityChestIndex].text + "</div>", function() {
+				communityChestAction(communityChestIndex);
+			});
+		}
+		
 		communityChestCards.index++;
 
 		if (communityChestCards.index >= communityChestCards.deck.length) {
