@@ -14,7 +14,7 @@ scrn.addEventListener("click", () => {
       bird.flap();
       break;
     case state.gameOver:
-      state.curr = state.getReady;
+      //state.curr = state.getReady;
       bird.speed = 0;
       bird.y = 100;
       pipe.pipes = [];
@@ -293,7 +293,7 @@ const UI = {
           this.y + this.gameOver.sprite.height - this.tap[0].sprite.height;
         sctx.drawImage(this.gameOver.sprite, this.x, this.y);
         sctx.drawImage(this.tap[this.frame].sprite, this.tx, this.ty);
-        document.getElementById("returnVal").textContent = this.score.curr;
+        console.log("game over state")
         window.opener.document.getElementById("returnValMain").textContent = this.score.curr;
         setTimeout(window.close, 4000);
         break;
@@ -331,15 +331,15 @@ const UI = {
         //     localStorage.getItem("best")
         //   );
         //   let bs = `BEST  :     ${this.score.best}`;
-        //   sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
-        //   sctx.strokeText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
+        //   sctx.fillText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
+        //   sctx.strokeText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
         //   sctx.fillText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
         //   sctx.strokeText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
         // } catch (e) {
           sctx.fillText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
           sctx.strokeText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
         // }
-
+        setTimeout(window.close, 4000);
         break;
       case state.win:
         sctx.lineWidth = "2";
@@ -350,12 +350,12 @@ const UI = {
         //     this.score.curr,
         //     localStorage.getItem("best")
         //   );
-        //   localStorage.setItem("best", this.score.best);
-        //   let bs = `BEST  :     ${this.score.best}`;
-        //   sctx.fillText(sc1, scrn.width / 2 - 80, scrn.height / 2 + 0);
-        //   sctx.strokeText(sc1, scrn.width / 2 - 80, scrn.height / 2 + 0);
-        //   sctx.fillText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
-        //   sctx.strokeText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
+          // localStorage.setItem("best", this.score.best);
+          // let bs = `BEST  :     ${this.score.best}`;
+          // sctx.fillText(sc1, scrn.width / 2 - 80, scrn.height / 2 + 0);
+          // // sctx.strokeText(sc1, scrn.width / 2 - 80, scrn.height / 2 + 0);
+          // sctx.fillText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
+          // sctx.strokeText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
         // } catch (e) {
           sctx.fillText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
           sctx.strokeText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
