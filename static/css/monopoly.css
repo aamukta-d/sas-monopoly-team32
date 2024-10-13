@@ -6,6 +6,7 @@ body {
 	font-size: 14px;
 }
 
+
 td {
 	font-size: 0.6rem;
 	border: 1px solid black;
@@ -13,9 +14,31 @@ td {
 }
 
 #setup {
-	
-	margin: 15px;
+	padding-top: 20px;
+	color: #d4e8d3;
+	max-width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+#player{
+	padding-top: 30px;
+	max-width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#player1input, #player2input, #player3input, #player4input{
+	padding-bottom: 10px;
+}
+
+#setupbutton{
+	padding-top: 30px;
+	max-width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 
 #moneybar {
 	float: right;
@@ -51,6 +74,10 @@ td {
 
 #refresh {
 	display: none;
+	margin: 15px;
+}
+
+#returnVale {
 	margin: 15px;
 }
 
@@ -863,31 +890,13 @@ video {
 	flex-grow: 1; /* Allow the video container to grow */
 	position: relative; /* For absolute positioning of the video */
 	padding: 20px; /* Padding around the video */
+	display: none;
 }
+
+
 
 #logo {
-	position: absolute;
-	top: 725px;
-	left: 315px;
 	display: none;
 	max-width: 500px;
-}
-
-#logo-old {
-	display:none;
-	max-width: 25%; /* Responsive image */
-	width:800px;
-	height: 600px;
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 20px; /* Optional: Space from the left */
-	padding-top: 750px;
-	padding-right: 350px;
-
-	position: absolute; /* Use absolute positioning */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to truly center the image */
-    max-width: 100%; /* Ensure image is responsive */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 2; /* Ensure the image is on top */
+	height: 65px;
 }

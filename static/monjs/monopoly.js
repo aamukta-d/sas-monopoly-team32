@@ -3,6 +3,7 @@ const ENLARGE5TOKEN = document.getElementById("enlarge5token");
 const IMAGE_URL = ENLARGE5TOKEN.getAttribute("data-image-url");
 
 function Game() {
+	var index = 0;
 	var die1;
 	var die2;
 	var areDiceRolled = false;
@@ -28,6 +29,32 @@ function Game() {
 	};
 
 	this.next = function() {
+		var returnVal = document.getElementById("returnValMain").textContent;
+		if (returnVal == 3){
+			p.money += 500;
+			for (var i = 1; i <= 4; i++) {
+				p_i = player[i];
+		
+				$("#moneybarrow" + i).show();
+				document.getElementById("p" + i + "moneybar").style.border = "2px solid " + p_i.color;
+				document.getElementById("p" + i + "money").innerHTML = p_i.money;
+				document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
+			}
+		}
+		else if (returnVal > 100){
+			p.money += parseInt(returnVal, 10);
+			for (var i = 1; i <= 4; i++) {
+				p_i = player[i];
+		
+				$("#moneybarrow" + i).show();
+				document.getElementById("p" + i + "moneybar").style.border = "2px solid " + p_i.color;
+				document.getElementById("p" + i + "money").innerHTML = p_i.money;
+				document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
+			}
+		}
+
+		document.getElementById("returnValMain").textContent = 0;
+
 		if (!p.human && p.money < 0) {
 			p.AI.payDebt();
 
@@ -1102,8 +1129,6 @@ function popup(HTML, action, option) {
 	});
 
 }
-
-
 function updatePosition() {
 	// Reset borders
 	document.getElementById("jail").style.border = "1px solid black";
@@ -1192,7 +1217,7 @@ function updateMoney() {
 	document.getElementById("pmoney").innerHTML = "$" + p.money;
 	$(".money-bar-row").hide();
 
-	for (var i = 1; i <= pcount; i++) {
+	for (var i = 1; i <= 4; i++) {
 		p_i = player[i];
 
 		$("#moneybarrow" + i).show();
@@ -1532,14 +1557,15 @@ function updateOption() {
 function chanceCommunityChest() {
 	var p = player[turn];
 
-	// Community Chest
+	//Community Chest
 	if (p.position === 2 || p.position === 17 || p.position === 33) {
 		var communityChestIndex = communityChestCards.deck[communityChestCards.index];
+		console.log(communityChestIndex);
 
-		// Remove the Get Out of the Backrooms free card from the deck.
-		if (communityChestIndex === 0) {
-			communityChestCards.deck.splice(communityChestCards.index, 1);
-		}
+		// Remove the get out of jail free card from the deck.
+		// if (communityChestIndex === 0) {
+		// 	communityChestCards.deck.splice(communityChestCards.index, 1);
+		// }
 
 		popup("<img src='" + IMAGE_URL + "community_chest_icon.png' style='height: 50px; width: 53px; float: left; margin: 8px 8px 8px 0px;' /><div style='font-weight: bold; font-size: 16px; '>Community Chest:</div><div style='text-align: justify;'>" + communityChestCards[communityChestIndex].text + "</div>", function() {
 			communityChestAction(communityChestIndex);
@@ -1550,6 +1576,7 @@ function chanceCommunityChest() {
 		if (communityChestCards.index >= communityChestCards.deck.length) {
 			communityChestCards.index = 0;
 		}
+	
 
 	// Chance
 	} else if (p.position === 7 || p.position === 22 || p.position === 36) {
@@ -2482,7 +2509,7 @@ function setup() {
 		}
 	}
 
-	$("#board, #moneybar, #wheelCanvas, #logo").show();
+	$("#board, #moneybar, #wheelCanvas, #logo, #subway-surfers-wrapper").show();
 	$("#setup").hide();
 
 	if (pcount === 2) {
@@ -2606,7 +2633,7 @@ window.onload = function() {
 
 	// Shuffle Chance and Community Chest decks.
 	chanceCards.deck.sort(function() {return Math.random() - 0.5;});
-	communityChestCards.deck.sort(function() {return Math.random() - 0.5;});
+	//communityChestCards.deck.sort(function() {return Math.random() - 0.5;});
 
 	// $("#playernumber").on("change", playernumber_onchange);
 	// playernumber_onchange();
@@ -2640,6 +2667,27 @@ window.onload = function() {
 		s = square[i];
 
 		currentCell = document.getElementById("cell" + i);
+		document.getElementById("cell" + i + "").style.height = "60px";
+
+
+		// All the colr strips set here:
+		if (s.color != "#FFFFFF") {
+			currentColorStrip = currentCell.appendChild(document.createElement("div"));
+			currentColorStrip.id = "ColorStrip" + i + "";
+			currentColorStrip.className = "color-strip";
+			document.getElementById("ColorStrip" + i + "").style.backgroundColor = s.color;
+			document.getElementById("ColorStrip" + i + "").style.width = "100%";
+			document.getElementById("ColorStrip" + i + "").style.height = "12px";
+			document.getElementById("ColorStrip" + i + "").style.border = "1px solid black";
+			// document.getElementById("ColorStrip" + i + "").style.position = "absolute";
+		} else {
+			currentColorStrip = currentCell.appendChild(document.createElement("div"));
+			currentColorStrip.id = "ColorStrip" + i + "";
+			currentColorStrip.className = "color-strip";
+			document.getElementById("ColorStrip" + i + "").style.backgroundColor = "#DeDeDe";
+			document.getElementById("ColorStrip" + i + "").style.width = "100%";
+			document.getElementById("ColorStrip" + i + "").style.height = "12px";
+			document.getElementById("ColorStrip" + i + "").style.border = "1px solid black";		}	
 
 		currentCellAnchor = currentCell.appendChild(document.createElement("div"));
 		currentCellAnchor.id = "cell" + i + "anchor";
@@ -2649,15 +2697,10 @@ window.onload = function() {
 		currentCellPositionHolder.id = "cell" + i + "positionholder";
 		currentCellPositionHolder.className = "cell-position-holder";
 		currentCellPositionHolder.enlargeId = "enlarge" + i;
-
-		// All the colr strips set here:
-		currentColorStrip = currentCell.appendChild(document.createElement("div"));
-		currentColorStrip.id = "ColorStrip" + i + "";
-		currentColorStrip.className = "color-strip";
-		document.getElementById("ColorStrip" + i + "").style.backgroundColor = s.color;
-		document.getElementById("ColorStrip" + i + "").style.width = "100%";
-		document.getElementById("ColorStrip" + i + "").style.height = "10px";
-
+		
+		if (s.color == "#FFFFFF") {
+			document.getElementById("cell" + i + "positionholder").style.borderTop = "none";
+		}
 
 		currentCellName = currentCellAnchor.appendChild(document.createElement("div"));
 		currentCellName.id = "cell" + i + "name";
@@ -2679,7 +2722,6 @@ window.onload = function() {
 	// Add images to enlarges.
 	document.getElementById("enlarge0token").innerHTML += '<img src="' + IMAGE_URL + 'arrow_icon.png" height="40" width="136" alt="" />';
 	document.getElementById("enlarge20price").innerHTML += "<img src='" + IMAGE_URL + "free_parking_icon.png' height='80' width='72' alt='' style='position: relative; top: -20px;' />";
-	document.getElementById("enlarge38token").innerHTML += '<img src="' + IMAGE_URL + 'tax_icon.png" height="60" width="70" alt="" style="position: relative; top: -20px;" />';
 
 	corrections();
 
