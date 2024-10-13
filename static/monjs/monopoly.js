@@ -1581,7 +1581,7 @@ function chanceCommunityChest() {
 				communityChestAction(communityChestIndex);
 			});
 		}
-		
+
 		communityChestCards.index++;
 
 		if (communityChestCards.index >= communityChestCards.deck.length) {
@@ -2397,7 +2397,7 @@ function roll() {
 }
 
 function play() {
-	if (turns >= maxTurns){ 
+	if (turns >= maxTurns * 4){ 
 		var mostMoney = 0;
 		var winner = 0;
 		for(let i = 1; i <= pcount; i++){
@@ -2415,7 +2415,8 @@ function play() {
 
 	turn++;
 	turns++;
-	document.getElementById("turnTimer").innerHTML = "Round " + turns + " of " + maxTurns;
+	var realTurns = (parseInt(maxTurns,10) * 4)
+	document.getElementById("turnTimer").innerHTML = "Turn " + turns + " of " + realTurns;
 	if (turn > pcount) {
 		turn -= pcount;
 	}
