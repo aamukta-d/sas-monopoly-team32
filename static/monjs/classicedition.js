@@ -46,7 +46,11 @@ function corrections() {
 	document.getElementById("enlarge4token").innerHTML += '<img src="' + IMAGE_URL + 'fanum.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
 	document.getElementById("enlarge5token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
 	document.getElementById("enlarge6token").innerHTML += '<img src="' + IMAGE_URL + 'sus.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge7token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	// Chance cards
+	document.getElementById("enlarge7token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="50" alt="" style="position: relative; bottom: 5px;" />';
+	document.getElementById("enlarge22token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="50" alt="" style="position: relative; bottom: 5px;" />';
+	document.getElementById("enlarge36token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="50" alt="" style="position: relative; bottom: 5px;" />';
+
 	document.getElementById("enlarge8token").innerHTML += '<img src="' + IMAGE_URL + 'sigma.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
 	document.getElementById("enlarge9token").innerHTML += '<img src="' + IMAGE_URL + 'alpha.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
 	document.getElementById("enlarge11token").innerHTML += '<img src="' + IMAGE_URL + 'beta.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
@@ -83,21 +87,21 @@ function utiltext() {
 }
 
 function transtext() {
-	return '<div style="font-size: 14px; line-height: 1.5;">Rent<span style="float: right;">$25.</span><br />If 2 Railroads are owned<span style="float: right;">50.</span><br />If 3 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">100.</span><br />If 4 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">200.</span></div>';
+	return '<div style="font-size: 14px; line-height: 1.5;">Rent<span style="float: right;">$25.</span><br />If 2 Stations are owned<span style="float: right;">$50.</span><br />If 3 Stations are owned<span style="float: right;">$100.</span><br />If 4 Stations are owned<span style="float: right;">$200.</span></div>';
 }
 
-function luxurytax() {
-	addAlert(player[turn].name + " paid $100 for landing on Luxury Tax.");
+function antiFanumTax() {
+	addAlert(player[turn].name + " paid $100 for landing on Anti Fanum Tax.");
 	player[turn].pay(100, 0);
 
-	$("#landed").show().text("You landed on Luxury Tax. Pay $100.");
+	$("#landed").show().text("You landed on Anti Fanum Tax. Pay $100.");
 }
 
-function citytax() {
-	addAlert(player[turn].name + " paid $200 for landing on City Tax.");
+function fanumTax() {
+	addAlert(player[turn].name + " paid $200 for landing on Fanum Tax.");
 	player[turn].pay(200, 0);
 
-	$("#landed").show().text("You landed on City Tax. Pay $200.");
+	$("#landed").show().text("You landed on Fanum Tax. Pay $200.");
 }
 
 var square = [];
@@ -132,7 +136,7 @@ square[26] = new Square("GYAT Avenue", "$260", "#FFFF00", 260, 8, 22, 110, 330, 
 square[27] = new Square("Demure Avenue", "$260", "#FFFF00", 260, 8, 22, 110, 330, 800, 975, 1150);
 square[28] = new Square("Tiktok Rizz Party", "$150", "#FFFFFF", 150, 2);
 square[29] = new Square("Brat Gardens", "$280", "#FFFF00", 280, 8, 24, 120, 360, 850, 1025, 1200);
-square[30] = new Square("Go to the Backrooms", "You have been sent to the Backrooms. What an L.Do not collect $200.", "#FFFFFF");
+square[30] = new Square("Go to the Backrooms", "You have been sent to the Backrooms. What an L. Do not collect $200.", "#FFFFFF");
 square[31] = new Square("Cap Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
 square[32] = new Square("Aura Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
 square[33] = new Square("MINIGAME", "WIN A PRIZE", "#FFFFFF");
