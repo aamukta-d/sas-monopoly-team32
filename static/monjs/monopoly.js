@@ -55,6 +55,13 @@ function Game() {
 
 		document.getElementById("returnValMain").textContent = 0;
 
+		var money = document.getElementById("p" + turn.toString() + "money").textContent; ////////////////
+		if(parseInt(money,10) >= parseInt(maxMoney)){
+			var winName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
+			$("*").hide();
+			alert(winName + " has won the game. \nRefresh to play another.");
+		}
+
 		if (!p.human && p.money < 0) {
 			p.AI.payDebt();
 
@@ -2230,9 +2237,9 @@ function land(increasedRent) {
 		document.getElementById("landed").innerHTML = "You landed on " + s.name + ". Property is mortgaged; no rent was collected.";
 	}
 
-	// City Tax
+	// Fanum Tax
 	if (p.position === 4) {
-		citytax();
+		fanumTax();
 	}
 
 	// Go to the Backrooms. Go directly to the Backrooms. Do not pass GO. Do not collect $200.
@@ -2249,9 +2256,9 @@ function land(increasedRent) {
 		return;
 	}
 
-	// Luxury Tax
+	// Anti Fanum Tax
 	if (p.position === 38) {
-		luxurytax();
+		antiFanumTax();
 	}
 
 	updateMoney();
@@ -2404,7 +2411,7 @@ function play() {
 
 	turn++;
 	turns++;
-	document.getElementById("turnTimer").innerHTML = "Turn " + turns + " of " + maxTurns;
+	document.getElementById("turnTimer").innerHTML = "Round " + turns + " of " + maxTurns;
 	if (turn > pcount) {
 		turn -= pcount;
 	}
@@ -2488,7 +2495,6 @@ function setup() {
 	var p;
 
 	maxTurns = document.getElementById("maxTurns").value;
-	maxTurns = maxTurns * pcount;
 	maxMoney = document.getElementById("maxMoney").value;
 	turns = 0;
 
@@ -2727,7 +2733,7 @@ window.onload = function() {
 
 	// Jail corrections
 	$("<div>", {id: "jailpositionholder" }).appendTo("#jail");
-	$("<span>").text("the Backrooms").appendTo("#jail");
+	$("<span>").text("The Backrooms").appendTo("#jail");
 
 	document.getElementById("jail").enlargeId = "enlarge40";
 
