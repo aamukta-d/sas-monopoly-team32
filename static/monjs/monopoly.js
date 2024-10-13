@@ -2411,7 +2411,7 @@ function play() {
 
 	turn++;
 	turns++;
-	document.getElementById("turnTimer").innerHTML = "Turn " + turns + " of " + maxTurns;
+	document.getElementById("turnTimer").innerHTML = "Round " + turns + " of " + maxTurns;
 	if (turn > pcount) {
 		turn -= pcount;
 	}
@@ -2495,7 +2495,6 @@ function setup() {
 	var p;
 
 	maxTurns = document.getElementById("maxTurns").value;
-	maxTurns = maxTurns * pcount;
 	maxMoney = document.getElementById("maxMoney").value;
 	turns = 0;
 

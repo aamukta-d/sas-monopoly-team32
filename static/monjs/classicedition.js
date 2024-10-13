@@ -220,7 +220,6 @@ function flappyPopUp() {
 	  <canvas id="canvas" width="300" height="500"></canvas>
 	</body>
 	<script src="static/monjs/fb_game.js"></script>
-	<text id="returnVal" ></text>
 	</html>
   `);
 	popupWindow.document.close();
