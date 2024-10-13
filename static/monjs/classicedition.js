@@ -106,7 +106,7 @@ function fanumTax() {
 
 var square = [];
 
-square[0] = new Square("GO", "COLLECT $200 SALARY AS YOU PASS.", "#FFFFFF");
+square[0] = new Square("GO", "COLLECT $200 SALARY AS YOU PASS.", "#fdfdfd");
 square[1] = new Square("Rizz Lane", "$60", "#8B4513", 60, 3, 2, 10, 30, 90, 160, 250);
 square[2] = new Square("MINIGAME", "WIN A PRIZE", "#FFFFFF");
 square[3] = new Square("Ohio", "$60", "#8B4513", 60, 3, 4, 20, 60, 180, 320, 450);
@@ -116,7 +116,7 @@ square[6] = new Square("Sus Street", "$100", "#87CEEB", 100, 4, 6, 30, 90, 270, 
 square[7] = new Square("Chance", "FOLLOW INSTRUCTIONS", "#FFFFFF");
 square[8] = new Square("Sigma Avenue", "$100", "#87CEEB", 100, 4, 6, 30, 90, 270, 400, 550);
 square[9] = new Square("Alpha Avenue", "$120", "#87CEEB", 120, 4, 8, 40, 100, 300, 450, 600);
-square[10] = new Square("Just Quandale Dingling", "", "#FFFFFF");
+square[10] = new Square("Just Quandale Dingling", "", "#fdfdfd");
 square[11] = new Square("Beta Avenue", "$140", "#FF0080", 140, 5, 10, 50, 150, 450, 625, 750);
 square[12] = new Square("SAS Party", "$150", "#FFFFFF", 150, 2);
 square[13] = new Square("Goofy Ahh Avenue", "$140", "#FF0080", 140, 5, 10, 50, 150, 450, 625, 750);
@@ -126,7 +126,7 @@ square[16] = new Square("Poggers Place", "$180", "#FFA500", 180, 6, 14, 70, 200,
 square[17] = new Square("MINIGAME", "WIN A PRIZE", "#FFFFFF");
 square[18] = new Square("Chicken Nugget Avenue", "$180", "#FFA500", 180, 6, 14, 70, 200, 550, 750, 950);
 square[19] = new Square("GigaChad Avenue", "$200", "#FFA500", 200, 6, 16, 80, 220, 600, 800, 1000);
-square[20] = new Square("Free Parking", "", "#FFFFFF");
+square[20] = new Square("Free Parking", "", "#fdfdfd");
 square[21] = new Square("Skibidi Street", "$220", "#FF0000", 220, 7, 18, 90, 250, 700, 875, 1050);
 square[22] = new Square("Chance", "FOLLOW INSTRUCTIONS", "#FFFFFF");
 square[23] = new Square("Sin City", "$220", "#FF0000", 220, 7, 18, 90, 250, 700, 875, 1050);
@@ -136,7 +136,7 @@ square[26] = new Square("GYAT Avenue", "$260", "#FFFF00", 260, 8, 22, 110, 330, 
 square[27] = new Square("Demure Avenue", "$260", "#FFFF00", 260, 8, 22, 110, 330, 800, 975, 1150);
 square[28] = new Square("Tiktok Rizz Party", "$150", "#FFFFFF", 150, 2);
 square[29] = new Square("Brat Gardens", "$280", "#FFFF00", 280, 8, 24, 120, 360, 850, 1025, 1200);
-square[30] = new Square("Go to the Backrooms", "You have been sent to the Backrooms. What an L. Do not collect $200.", "#FFFFFF");
+square[30] = new Square("Go to the Backrooms", "You have been sent to the Backrooms. What an L. Do not collect $200.", "#fdfdfd");
 square[31] = new Square("Cap Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
 square[32] = new Square("Aura Avenue", "$300", "#008000", 300, 9, 26, 130, 390, 900, 1100, 1275);
 square[33] = new Square("MINIGAME", "WIN A PRIZE", "#FFFFFF");
