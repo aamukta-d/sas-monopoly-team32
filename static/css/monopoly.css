@@ -879,7 +879,7 @@ td {
 
 }
 
-video {
+#subway-surfers {
 	height: 90vh; /* Full height of the viewport */
 	width: auto; /* Adjust width accordingly */
 	position: absolute; /* Position the video absolutely */
@@ -893,7 +893,18 @@ video {
 	display: none;
 }
 
+#family-guy {
+	height: 350px; /* Full height of the viewport */
+	width: auto; /* Adjust width accordingly */
+	position: absolute; /* Position the video absolutely */
+}
 
+#family-guy-wrapper {
+	flex-grow: 1; /* Allow the video container to grow */
+	position: relative; /* For absolute positioning of the video */
+	flex-grow: 1; /* Allow the video container to grow */
+	padding: 40px; /* Padding around the video */
+}
 
 #logo {
 	display: none;

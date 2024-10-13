@@ -396,6 +396,28 @@
 				<input type="button" class="button" value="Start Game" onclick="setup();" title="Begin playing." />
 			</div>
 		</div>
+		<div id="family-guy-wrapper" style="color: #000000;">
+			<video id="family-guy" autoplay loop muted>
+			<source src="{{ url_for('static', filename='videos/Family_Guy_No_Copyright.mp4') }}" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+	
+		<script>
+					// Get the video element
+			const video2 = document.getElementById('family-guy');
+
+			// Wait for the video metadata to load
+			video2.addEventListener('loadedmetadata', function() {
+				const randomTime = Math.random() * video2.duration; // Generate a random time between 0 and video duration
+				video2.currentTime = randomTime; // Set the video to start at the random time
+			});
+
+			// Optional: Handle errors
+			video2.addEventListener('error', function(e) {
+				console.error('Error loading video:', e);
+			});
+		</script>
 	</div>
 
 	<div id="control">
