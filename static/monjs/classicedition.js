@@ -40,46 +40,46 @@ function corrections() {
 	const IMAGE_URL = ENLARGE5TOKEN.getAttribute("data-image-url");
 
 	// Add images to enlarges.
-	document.getElementById("enlarge1token").innerHTML += '<img src="' + IMAGE_URL + 'rizz.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge2token").innerHTML += '<img src="' + IMAGE_URL + 'minigame.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge3token").innerHTML += '<img src="' + IMAGE_URL + 'ohio.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge4token").innerHTML += '<img src="' + IMAGE_URL + 'fanum.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge5token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge6token").innerHTML += '<img src="' + IMAGE_URL + 'sus.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge1token").innerHTML += '<img src="' + IMAGE_URL + 'rizz.png" height="60" width="auto" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge2token").innerHTML += '<img src="' + IMAGE_URL + 'minigame.png" height="60" width="auto" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge3token").innerHTML += '<img src="' + IMAGE_URL + 'ohio.png" height="60" width="auto" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge4token").innerHTML += '<img src="' + IMAGE_URL + 'fanum.png" height="60" width="auto" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge5token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="auto" width="65" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge6token").innerHTML += '<img src="' + IMAGE_URL + 'sus.png" height="60" width="auto" alt="" style="position: relative; bottom: 20px;" />';
 	// Chance cards
 	document.getElementById("enlarge7token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="50" alt="" style="position: relative; bottom: 5px;" />';
 	//document.getElementById("enlarge22token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="50" alt="" style="position: relative; bottom: 5px;" />';
 	//document.getElementById("enlarge36token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="50" alt="" style="position: relative; bottom: 5px;" />';
 
-	document.getElementById("enlarge8token").innerHTML += '<img src="' + IMAGE_URL + 'sigma.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge9token").innerHTML += '<img src="' + IMAGE_URL + 'alpha.png" height="60" width="65" alt="" style="position: relative; bottom: 20px;" />';
-	document.getElementById("enlarge11token").innerHTML += '<img src="' + IMAGE_URL + 'beta.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge12token").innerHTML += '<img src="' + IMAGE_URL + 'sas.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge13token").innerHTML += '<img src="' + IMAGE_URL + 'goofy.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge14token").innerHTML += '<img src="' + IMAGE_URL + 'grimace.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge15token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge16token").innerHTML += '<img src="' + IMAGE_URL + 'pog.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge17token").innerHTML += '<img src="' + IMAGE_URL + 'minigame.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge18token").innerHTML += '<img src="' + IMAGE_URL + 'nugget.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge19token").innerHTML += '<img src="' + IMAGE_URL + 'gigachad.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge21token").innerHTML += '<img src="' + IMAGE_URL + 'skibidi.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge22token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge23token").innerHTML += '<img src="' + IMAGE_URL + 'sin_city.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge24token").innerHTML += '<img src="' + IMAGE_URL + 'fnaf.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge25token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge26token").innerHTML += '<img src="' + IMAGE_URL + 'gyat.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge27token").innerHTML += '<img src="' + IMAGE_URL + 'demure.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge28token").innerHTML += '<img src="' + IMAGE_URL + 'rizz_party.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge29token").innerHTML += '<img src="' + IMAGE_URL + 'brat.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge31token").innerHTML += '<img src="' + IMAGE_URL + 'cap.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge32token").innerHTML += '<img src="' + IMAGE_URL + 'aura.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge33token").innerHTML += '<img src="' + IMAGE_URL + 'minigame.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge34token").innerHTML += '<img src="' + IMAGE_URL + 'yap.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge35token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge36token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge37token").innerHTML += '<img src="' + IMAGE_URL + 'johnpork.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge38token").innerHTML += '<img src="' + IMAGE_URL + 'antifanum.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
-	document.getElementById("enlarge39token").innerHTML += '<img src="' + IMAGE_URL + 'tilted.png" height="60" width="65" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge8token").innerHTML += '<img src="' + IMAGE_URL + 'sigma.png" height="60" width="auto" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge9token").innerHTML += '<img src="' + IMAGE_URL + 'alpha.png" height="60" width="auto" alt="" style="position: relative; bottom: 20px;" />';
+	document.getElementById("enlarge11token").innerHTML += '<img src="' + IMAGE_URL + 'beta.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge12token").innerHTML += '<img src="' + IMAGE_URL + 'sas.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge13token").innerHTML += '<img src="' + IMAGE_URL + 'goofy.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge14token").innerHTML += '<img src="' + IMAGE_URL + 'grimace.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge15token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge16token").innerHTML += '<img src="' + IMAGE_URL + 'pog.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge17token").innerHTML += '<img src="' + IMAGE_URL + 'minigame.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge18token").innerHTML += '<img src="' + IMAGE_URL + 'nugget.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge19token").innerHTML += '<img src="' + IMAGE_URL + 'gigachad.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge21token").innerHTML += '<img src="' + IMAGE_URL + 'skibidi.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge22token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge23token").innerHTML += '<img src="' + IMAGE_URL + 'sin_city.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge24token").innerHTML += '<img src="' + IMAGE_URL + 'fnaf.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge25token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge26token").innerHTML += '<img src="' + IMAGE_URL + 'gyat.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge27token").innerHTML += '<img src="' + IMAGE_URL + 'demure.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge28token").innerHTML += '<img src="' + IMAGE_URL + 'rizz_party.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge29token").innerHTML += '<img src="' + IMAGE_URL + 'brat.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge31token").innerHTML += '<img src="' + IMAGE_URL + 'cap.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge32token").innerHTML += '<img src="' + IMAGE_URL + 'aura.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge33token").innerHTML += '<img src="' + IMAGE_URL + 'minigame.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge34token").innerHTML += '<img src="' + IMAGE_URL + 'yap.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge35token").innerHTML += '<img src="' + IMAGE_URL + 'train_icon.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge36token").innerHTML += '<img src="' + IMAGE_URL + 'chance.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge37token").innerHTML += '<img src="' + IMAGE_URL + 'johnpork.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge38token").innerHTML += '<img src="' + IMAGE_URL + 'antifanum.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
+	document.getElementById("enlarge39token").innerHTML += '<img src="' + IMAGE_URL + 'tilted.png" height="60" width="auto" alt="" style="position: relative; top: -20px;" />';
 }
 
 function utiltext() {
