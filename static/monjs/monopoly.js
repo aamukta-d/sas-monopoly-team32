@@ -2687,6 +2687,7 @@ window.onload = function() {
 			document.getElementById("ColorStrip" + i + "").style.width = "100%";
 			document.getElementById("ColorStrip" + i + "").style.height = "12px";
 			document.getElementById("ColorStrip" + i + "").style.border = "1px solid black";
+			document.getElementById("ColorStrip" + i + "").style.borderBottom = "none";
 			// document.getElementById("ColorStrip" + i + "").style.position = "absolute";
 		} else {
 			currentColorStrip = currentCell.appendChild(document.createElement("div"));
@@ -2695,7 +2696,19 @@ window.onload = function() {
 			document.getElementById("ColorStrip" + i + "").style.backgroundColor = "#DeDeDe";
 			document.getElementById("ColorStrip" + i + "").style.width = "100%";
 			document.getElementById("ColorStrip" + i + "").style.height = "12px";
-			document.getElementById("ColorStrip" + i + "").style.border = "1px solid black";		}	
+			document.getElementById("ColorStrip" + i + "").style.border = "1px solid black";
+		}
+		
+		if (s.color == "#fdfdfd") {
+			currentColorStrip = currentCell.appendChild(document.createElement("div"));
+			currentColorStrip.id = "ColorStrip" + i + "";
+			currentColorStrip.className = "color-strip";
+			document.getElementById("ColorStrip" + i + "").style.backgroundColor = "#FFFFFF";
+			document.getElementById("ColorStrip" + i + "").style.width = "100%";
+			document.getElementById("ColorStrip" + i + "").style.height = "12px";
+			document.getElementById("ColorStrip" + i + "").style.border = "1px solid black";
+			document.getElementById("ColorStrip" + i + "").style.borderBottom = "none";
+		}  
 
 		currentCellAnchor = currentCell.appendChild(document.createElement("div"));
 		currentCellAnchor.id = "cell" + i + "anchor";
@@ -2706,7 +2719,7 @@ window.onload = function() {
 		currentCellPositionHolder.className = "cell-position-holder";
 		currentCellPositionHolder.enlargeId = "enlarge" + i;
 		
-		if (s.color == "#FFFFFF") {
+		if (s.color == "#FFFFFF" || s.color == "#fdfdfd") {
 			document.getElementById("cell" + i + "positionholder").style.borderTop = "none";
 		}
 
