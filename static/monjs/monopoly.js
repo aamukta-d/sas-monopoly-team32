@@ -55,6 +55,13 @@ function Game() {
 
 		document.getElementById("returnValMain").textContent = 0;
 
+		var money = document.getElementById("p" + turn.toString() + "money").textContent; ////////////////
+		if(parseInt(money,10) >= parseInt(maxMoney)){
+			var winName =  document.getElementById("p" + turn.toString() + "moneyname").textContent;
+			$("*").hide();
+			alert(winName + " has won the game. \nRefresh to play another.");
+		}
+
 		if (!p.human && p.money < 0) {
 			p.AI.payDebt();
 
