@@ -268,7 +268,6 @@ const UI = {
   tap: [{ sprite: new Image() }, { sprite: new Image() }],
   score: {
     curr: 0,
-    best: 0,
   },
   x: 0,
   y: 0,
@@ -324,44 +323,43 @@ const UI = {
         break;
       case state.gameOver:
         sctx.lineWidth = "2";
-        sctx.font = "40px Squada One";
-        let sc = `SCORE :     ${this.score.curr}`;
-        try {
-          this.score.best = Math.max(
-            this.score.curr,
-            localStorage.getItem("best")
-          );
-          localStorage.setItem("best", this.score.best);
-          let bs = `BEST  :     ${this.score.best}`;
-          sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
-          sctx.strokeText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
-          sctx.fillText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
-          sctx.strokeText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
-        } catch (e) {
+        sctx.font = "40px sans-serif";
+        let sc = `SCORE: ${this.score.curr}`;
+        // try {
+        //   this.score.best = Math.max(
+        //     this.score.curr,
+        //     localStorage.getItem("best")
+        //   );
+        //   let bs = `BEST  :     ${this.score.best}`;
+        //   sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
+        //   sctx.strokeText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
+        //   sctx.fillText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
+        //   sctx.strokeText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
+        // } catch (e) {
           sctx.fillText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
           sctx.strokeText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
-        }
+        // }
 
         break;
       case state.win:
         sctx.lineWidth = "2";
-        sctx.font = "40px Squada One";
-        let sc1 = `SCORE :     ${this.score.curr}`;
-        try {
-          this.score.best = Math.max(
-            this.score.curr,
-            localStorage.getItem("best")
-          );
-          localStorage.setItem("best", this.score.best);
-          let bs = `BEST  :     ${this.score.best}`;
-          sctx.fillText(sc1, scrn.width / 2 - 80, scrn.height / 2 + 0);
-          sctx.strokeText(sc1, scrn.width / 2 - 80, scrn.height / 2 + 0);
-          sctx.fillText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
-          sctx.strokeText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
-        } catch (e) {
+        sctx.font = "40px sans-serif";
+        let sc1 = `SCORE : ${this.score.curr}`;
+        // try {
+        //   this.score.best = Math.max(
+        //     this.score.curr,
+        //     localStorage.getItem("best")
+        //   );
+        //   localStorage.setItem("best", this.score.best);
+        //   let bs = `BEST  :     ${this.score.best}`;
+        //   sctx.fillText(sc1, scrn.width / 2 - 80, scrn.height / 2 + 0);
+        //   sctx.strokeText(sc1, scrn.width / 2 - 80, scrn.height / 2 + 0);
+        //   sctx.fillText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
+        //   sctx.strokeText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
+        // } catch (e) {
           sctx.fillText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
           sctx.strokeText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
-        }
+        // }
 
         break;
     }

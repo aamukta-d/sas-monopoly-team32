@@ -1567,7 +1567,7 @@ function chanceCommunityChest() {
 	var p = player[turn];
 
 	//Community Chest
-	if (p.position === 2 || p.position === 17 || p.position === 33) {
+	if (p.position === 2 || p.position === 17 || p.position === 33 || p.position === 2 || p.position === 5 || p.position === 14) {
 		var communityChestIndex = communityChestCards.deck[communityChestCards.index];
 		console.log(communityChestIndex);
 
