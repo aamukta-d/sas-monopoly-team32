@@ -2,6 +2,14 @@
 
 > A modern twist on Monopoly designed to captivate Generation Alpha, developed during the Glasgow University Tech Society’s “Do You Have The GUTS” Hackathon, and proud **Winner of the SAS Challenge**.
 
+### Team Members
+
+- Yigit Sayar
+- Juliana Cristina Green
+- Oran Grant
+- Aamukta Maalyada Dahagam
+- Kalila Chand
+
 ## Setup & Run the Game
 
 ```
