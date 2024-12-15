@@ -1,6 +1,6 @@
 # SKIBIDOPOLY
 
-A modern twist on Monopoly designed to captivate Generation Alpha, developed during the Glasgow University Tech Society’s “Do You Have The GUTS” Hackathon, and proud **Winner of the SAS Challenge**.
+A modern twist on Monopoly designed to captivate Generation Alpha, developed during the Glasgow University Tech Society’s “Do You Have The GUTS” Hackathon 2024, and proud **Winner of the SAS Challenge**.
 
 ### Team Members
 
